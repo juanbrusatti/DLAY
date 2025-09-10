@@ -1,8 +1,11 @@
 "use client"
 
 import { Github, Linkedin, Mail, Heart } from "lucide-react"
+import { useLanguage } from "@/contexts/language-context"
 
 export default function Footer() {
+  const { t } = useLanguage()
+
   return (
     <footer className="bg-card border-t border-border py-12">
       <div className="container mx-auto px-4">
@@ -16,8 +19,7 @@ export default function Footer() {
               <span className="font-montserrat font-black text-xl text-foreground">DLAY</span>
             </div>
             <p className="font-open-sans text-muted-foreground mb-4 max-w-md">
-              We are a team of passionate programmers who transform ideas into software. Let's build something amazing
-              together.
+              {t('footer.description')}
             </p>
             <div className="flex space-x-4">
               <a
@@ -50,14 +52,14 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-montserrat font-bold text-foreground mb-4">Quick Links</h3>
+            <h3 className="font-montserrat font-bold text-foreground mb-4">{t('footer.quickLinks')}</h3>
             <ul className="space-y-2 font-open-sans text-sm">
               <li>
                 <button
                   onClick={() => document.getElementById("home")?.scrollIntoView({ behavior: "smooth" })}
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
-                  Home
+                  {t('navigation.home')}
                 </button>
               </li>
               <li>
@@ -65,7 +67,7 @@ export default function Footer() {
                   onClick={() => document.getElementById("about")?.scrollIntoView({ behavior: "smooth" })}
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
-                  About Us
+                  {t('navigation.about')}
                 </button>
               </li>
               <li>
@@ -73,7 +75,7 @@ export default function Footer() {
                   onClick={() => document.getElementById("team")?.scrollIntoView({ behavior: "smooth" })}
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
-                  Team
+                  {t('navigation.team')}
                 </button>
               </li>
               <li>
@@ -81,7 +83,7 @@ export default function Footer() {
                   onClick={() => document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })}
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
-                  Projects
+                  {t('navigation.projects')}
                 </button>
               </li>
             </ul>
@@ -89,7 +91,7 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="font-montserrat font-bold text-foreground mb-4">Contact</h3>
+            <h3 className="font-montserrat font-bold text-foreground mb-4">{t('footer.contact')}</h3>
             <ul className="space-y-2 font-open-sans text-sm">
               <li>
                 <a href="mailto:hello@dlay.dev" className="text-muted-foreground hover:text-primary transition-colors">
@@ -111,7 +113,7 @@ export default function Footer() {
                   onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
-                  Get in Touch
+                  {t('footer.getInTouch')}
                 </button>
               </li>
             </ul>
@@ -121,9 +123,9 @@ export default function Footer() {
         {/* Bottom */}
         <div className="border-t border-border mt-8 pt-8 text-center">
           <p className="font-open-sans text-sm text-muted-foreground flex items-center justify-center">
-            Made with <Heart className="w-4 h-4 text-red-500 mx-1" /> by the DLAY team
+            {t('footer.madeWith')} <Heart className="w-4 h-4 text-red-500 mx-1" /> {t('footer.byTeam')}
           </p>
-          <p className="font-open-sans text-xs text-muted-foreground mt-2">© 2024 DLAY. All rights reserved.</p>
+          <p className="font-open-sans text-xs text-muted-foreground mt-2">{t('footer.copyright')}</p>
         </div>
       </div>
     </footer>

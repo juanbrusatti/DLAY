@@ -8,8 +8,10 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Mail, MessageSquare, Linkedin, Send } from "lucide-react"
+import { useLanguage } from "@/contexts/language-context"
 
 export default function ContactSection() {
+  const { t } = useLanguage()
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -38,13 +40,13 @@ export default function ContactSection() {
           {/* Header */}
           <div className="text-center mb-16">
             <h2 className="font-montserrat font-black text-3xl md:text-4xl lg:text-5xl text-foreground mb-4">
-              Let's <span className="text-primary">Connect</span>
+              {t('contact.title')} <span className="text-primary">Connect</span>
             </h2>
             <p className="font-open-sans text-lg text-muted-foreground max-w-2xl mx-auto text-pretty mb-6">
-              Do you want to take your idea to the next level? Let's talk.
+              {t('contact.subtitle')}
             </p>
             <p className="font-open-sans text-muted-foreground">
-              We're excited to hear about your project and explore how we can bring your vision to life.
+              {t('contact.subtitle2')}
             </p>
           </div>
 
@@ -52,7 +54,7 @@ export default function ContactSection() {
             {/* Contact Form */}
             <Card className="shadow-lg">
               <CardHeader>
-                <CardTitle className="font-montserrat font-bold text-xl text-foreground">Send us a message</CardTitle>
+                <CardTitle className="font-montserrat font-bold text-xl text-foreground">{t('contact.formTitle')}</CardTitle>
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-4">
@@ -60,7 +62,7 @@ export default function ContactSection() {
                     <Input
                       type="text"
                       name="name"
-                      placeholder="Your Name"
+                      placeholder={t('contact.namePlaceholder')}
                       value={formData.name}
                       onChange={handleChange}
                       required
@@ -71,7 +73,7 @@ export default function ContactSection() {
                     <Input
                       type="email"
                       name="email"
-                      placeholder="Your Email"
+                      placeholder={t('contact.emailPlaceholder')}
                       value={formData.email}
                       onChange={handleChange}
                       required
@@ -81,7 +83,7 @@ export default function ContactSection() {
                   <div>
                     <Textarea
                       name="message"
-                      placeholder="Tell us about your project..."
+                      placeholder={t('contact.messagePlaceholder')}
                       value={formData.message}
                       onChange={handleChange}
                       required
@@ -93,7 +95,7 @@ export default function ContactSection() {
                     type="submit"
                     className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-open-sans font-semibold group"
                   >
-                    Send Message
+                    {t('contact.sendMessage')}
                     <Send className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </Button>
                 </form>
@@ -111,9 +113,9 @@ export default function ContactSection() {
                       </div>
                     </div>
                     <div>
-                      <h3 className="font-montserrat font-bold text-lg text-foreground mb-2">Email Us</h3>
+                      <h3 className="font-montserrat font-bold text-lg text-foreground mb-2">{t('contact.emailUs')}</h3>
                       <p className="font-open-sans text-muted-foreground mb-2">
-                        Get in touch via email for detailed discussions
+                        {t('contact.emailDescription')}
                       </p>
                       <a
                         href="mailto:hello@dlay.dev"
@@ -135,8 +137,8 @@ export default function ContactSection() {
                       </div>
                     </div>
                     <div>
-                      <h3 className="font-montserrat font-bold text-lg text-foreground mb-2">WhatsApp</h3>
-                      <p className="font-open-sans text-muted-foreground mb-2">Quick questions? Message us directly</p>
+                      <h3 className="font-montserrat font-bold text-lg text-foreground mb-2">{t('contact.whatsapp')}</h3>
+                      <p className="font-open-sans text-muted-foreground mb-2">{t('contact.whatsappDescription')}</p>
                       <a
                         href="https://wa.me/1234567890"
                         className="font-open-sans text-primary hover:text-primary/80 transition-colors font-semibold"
@@ -159,8 +161,8 @@ export default function ContactSection() {
                       </div>
                     </div>
                     <div>
-                      <h3 className="font-montserrat font-bold text-lg text-foreground mb-2">LinkedIn</h3>
-                      <p className="font-open-sans text-muted-foreground mb-2">Connect with us professionally</p>
+                      <h3 className="font-montserrat font-bold text-lg text-foreground mb-2">{t('contact.linkedin')}</h3>
+                      <p className="font-open-sans text-muted-foreground mb-2">{t('contact.linkedinDescription')}</p>
                       <a
                         href="https://linkedin.com/company/dlay-dev"
                         className="font-open-sans text-primary hover:text-primary/80 transition-colors font-semibold"

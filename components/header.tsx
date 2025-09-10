@@ -66,12 +66,12 @@ export default function Header() {
         {/* Language Toggle & CTA Button */}
         <div className="hidden md:flex items-center space-x-4">
           <LanguageToggle />
-          <Button
-            onClick={() => scrollToSection("contact")}
-            className="bg-primary hover:bg-primary/90 text-primary-foreground font-open-sans font-semibold"
-          >
-            Let's work together
-          </Button>
+               <Button
+                 onClick={() => scrollToSection("contact")}
+                 className="bg-primary hover:bg-primary/90 text-primary-foreground font-open-sans font-semibold"
+               >
+                 {t('navigation.letsWorkTogether')}
+               </Button>
         </div>
 
         {/* Mobile Menu Button */}
@@ -116,12 +116,12 @@ export default function Header() {
             </button>
             <div className="flex items-center justify-between pt-2">
               <LanguageToggle />
-              <Button
-                onClick={() => scrollToSection("contact")}
-                className="bg-primary hover:bg-primary/90 text-primary-foreground font-open-sans font-semibold"
-              >
-                Let's work together
-              </Button>
+               <Button
+                 onClick={() => scrollToSection("contact")}
+                 className="bg-primary hover:bg-primary/90 text-primary-foreground font-open-sans font-semibold"
+               >
+                 {t('navigation.letsWorkTogether')}
+               </Button>
             </div>
           </nav>
         </div>

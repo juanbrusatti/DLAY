@@ -1,7 +1,10 @@
+"use client"
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { ExternalLink, Github, Clock, CheckCircle } from "lucide-react"
+import { useLanguage } from "@/contexts/language-context"
 
 const projects = {
   completed: [
@@ -59,15 +62,17 @@ const projects = {
 }
 
 export default function ProjectsSection() {
+  const { t } = useLanguage()
+
   return (
     <section id="projects" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="font-montserrat font-black text-3xl md:text-4xl lg:text-5xl text-foreground mb-4">
-            Our <span className="text-primary">Projects</span>
+            {t('projects.title')} <span className="text-primary">Projects</span>
           </h2>
           <p className="font-open-sans text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
-            From concept to deployment, here's a showcase of the innovative solutions we've built for our clients.
+            {t('projects.subtitle')}
           </p>
         </div>
 
@@ -75,7 +80,7 @@ export default function ProjectsSection() {
         <div className="mb-16">
           <div className="flex items-center mb-8">
             <CheckCircle className="w-6 h-6 text-primary mr-3" />
-            <h3 className="font-montserrat font-bold text-2xl text-foreground">Completed Projects</h3>
+            <h3 className="font-montserrat font-bold text-2xl text-foreground">{t('projects.completed')}</h3>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.completed.map((project, index) => (
@@ -105,11 +110,11 @@ export default function ProjectsSection() {
                   <div className="flex space-x-2">
                     <Button size="sm" variant="outline" className="flex-1 bg-transparent">
                       <ExternalLink className="w-4 h-4 mr-2" />
-                      Demo
+                      {t('projects.demo')}
                     </Button>
                     <Button size="sm" variant="outline" className="flex-1 bg-transparent">
                       <Github className="w-4 h-4 mr-2" />
-                      Code
+                      {t('projects.code')}
                     </Button>
                   </div>
                 </CardContent>
@@ -122,7 +127,7 @@ export default function ProjectsSection() {
         <div>
           <div className="flex items-center mb-8">
             <Clock className="w-6 h-6 text-accent mr-3" />
-            <h3 className="font-montserrat font-bold text-2xl text-foreground">In Progress</h3>
+            <h3 className="font-montserrat font-bold text-2xl text-foreground">{t('projects.inProgress')}</h3>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {projects.inProgress.map((project, index) => (
@@ -134,7 +139,7 @@ export default function ProjectsSection() {
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                   <div className="absolute top-4 right-4">
-                    <Badge className="bg-accent text-accent-foreground">In Progress</Badge>
+                    <Badge className="bg-accent text-accent-foreground">{t('projects.inProgress')}</Badge>
                   </div>
                 </div>
                 <CardHeader>
@@ -154,7 +159,7 @@ export default function ProjectsSection() {
 
                   <div className="flex items-center justify-between">
                     <span className="font-open-sans text-sm text-muted-foreground">
-                      Expected: {project.expectedCompletion}
+                      {t('projects.expected')}: {project.expectedCompletion}
                     </span>
                   </div>
                 </CardContent>
