@@ -16,21 +16,21 @@ export default function Footer() {
               <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
                 <span className="text-primary-foreground font-bold text-lg">D</span>
               </div>
-              <span className="font-montserrat font-black text-xl text-foreground">DLAY</span>
+              <span className="font-montserrat font-black text-xl text-foreground">=DLAY</span>
             </div>
             <p className="font-open-sans text-muted-foreground mb-4 max-w-md">
               {t('footer.description')}
             </p>
             <div className="flex space-x-4">
               <a
-                href="mailto:hello@dlay.dev"
+                href="mailto:dlay.contact@gmail.com"
                 className="text-muted-foreground hover:text-primary transition-colors"
                 aria-label="Email DLAY"
               >
                 <Mail size={20} />
               </a>
               <a
-                href="https://github.com/dlay-dev"
+                href="https://github.com/dlay-team"
                 className="text-muted-foreground hover:text-primary transition-colors"
                 aria-label="DLAY GitHub"
                 target="_blank"
@@ -39,7 +39,7 @@ export default function Footer() {
                 <Github size={20} />
               </a>
               <a
-                href="https://linkedin.com/company/dlay-dev"
+                href="https://linkedin.com/company/dlay-team"
                 className="text-muted-foreground hover:text-primary transition-colors"
                 aria-label="DLAY LinkedIn"
                 target="_blank"
@@ -94,13 +94,13 @@ export default function Footer() {
             <h3 className="font-montserrat font-bold text-foreground mb-4">{t('footer.contact')}</h3>
             <ul className="space-y-2 font-open-sans text-sm">
               <li>
-                <a href="mailto:hello@dlay.dev" className="text-muted-foreground hover:text-primary transition-colors">
-                  hello@dlay.dev
+                <a href="mailto:dlay.contact@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
+                  dlay.contact@gmail.com
                 </a>
               </li>
               <li>
                 <a
-                  href="https://wa.me/1234567890"
+                  href="https://wa.me/543584178955"
                   className="text-muted-foreground hover:text-primary transition-colors"
                   target="_blank"
                   rel="noopener noreferrer"

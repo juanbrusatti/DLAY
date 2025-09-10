@@ -35,13 +35,11 @@ const projects = {
       id: "smartinventory",
       image: "/inventory-management-dashboard-with-ai-predictions.jpg",
       technologies: ["Python", "TensorFlow", "React", "FastAPI"],
-      expectedCompletion: "Q2 2024",
     },
     {
       id: "learnhub",
       image: "/e-learning-platform-with-course-interface.jpg",
       technologies: ["Vue.js", "Django", "PostgreSQL", "Redis"],
-      expectedCompletion: "Q1 2024",
     },
   ],
 }
@@ -144,7 +142,7 @@ export default function ProjectsSection() {
 
                   <div className="flex items-center justify-between">
                     <span className="font-open-sans text-sm text-muted-foreground">
-                      {t('projects.expected')}: {project.expectedCompletion}
+                      {t('projects.expected')}
                     </span>
                   </div>
                 </CardContent>
