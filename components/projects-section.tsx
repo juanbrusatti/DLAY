@@ -37,8 +37,8 @@ const projects = {
       client: "AR Aberturas",
       description: "ACMA es un software avanzado para la industria del vidrio que permite generar presupuestos precisos, gestionar stock de planchas y sobrantes, e integrar un algoritmo de optimización de cortes, reduciendo costos de producción y maximizando la eficiencia operativa de cada proyecto.",
       descriptionEn: "ACMA is an advanced software for the glass industry that enables precise budget generation, manages sheet and scrap inventory, and integrates a cutting optimization algorithm, reducing production costs and maximizing operational efficiency for each project.",
-      image: "/inventory-management-dashboard-with-ai-predictions.jpg",
-      technologies: ["Python", "TensorFlow", "React", "FastAPI"],
+      image: "/captura-acma.png",
+      technologies: ["Python", "Ruby","JavaScript", "Tailwind CSS", "PostgreSQL"],
     },
     {
       id: "applert",
