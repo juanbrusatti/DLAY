@@ -1,0 +1,65 @@
+{
+  "metadata": {
+    "title": "DLAY - Equipo de Programación",
+    "description": "Somos un equipo de programadores apasionados que transformamos ideas en software"
+  },
+  "hero": {
+    "title": "Somos un equipo de programadores apasionados que transformamos ideas en software",
+    "subtitle": "Desde el concepto hasta el despliegue, damos vida a tu visión digital con tecnología de vanguardia y soluciones innovadoras.",
+    "startProject": "Iniciar Tu Proyecto",
+    "viewWork": "Ver Nuestro Trabajo"
+  },
+  "about": {
+    "title": "Acerca de DLAY",
+    "ourStory": "Nuestra Historia",
+    "storyText1": "DLAY fue fundado por un grupo de estudiantes apasionados de ciencias de la computación que compartían una visión común: cerrar la brecha entre ideas innovadoras y soluciones de software prácticas.",
+    "storyText2": "Lo que comenzó como sesiones de programación nocturnas en nuestro laboratorio universitario ha evolucionado hacia un equipo dedicado comprometido con transformar cómo las empresas abordan la tecnología.",
+    "storyText3": "Creemos que el gran software no se trata solo de código limpio—se trata de entender las necesidades de nuestros clientes y entregar soluciones que marquen una diferencia real.",
+    "whatDrivesUs": "Lo Que Nos Impulsa",
+    "values": {
+      "trust": {
+        "title": "Confianza y Compromiso",
+        "description": "Construimos relaciones duraderas con nuestros clientes a través de la transparencia, confiabilidad y dedicación inquebrantable a su éxito."
+      },
+      "innovation": {
+        "title": "Innovación",
+        "description": "Nos mantenemos a la vanguardia de la tecnología, aprendiendo constantemente e implementando soluciones de vanguardia para resolver problemas complejos."
+      },
+      "collaboration": {
+        "title": "Colaboración",
+        "description": "Creemos en el poder del trabajo en equipo, tanto dentro de nuestro equipo como con nuestros clientes, para crear resultados excepcionales."
+      },
+      "practical": {
+        "title": "Soluciones Prácticas",
+        "description": "Nos enfocamos en entregar soluciones prácticas y escalables que proporcionen valor real e impulsen resultados comerciales significativos."
+      }
+    }
+  },
+  "team": {
+    "title": "Conoce Nuestro Equipo",
+    "subtitle": "Los desarrolladores apasionados detrás de DLAY"
+  },
+  "projects": {
+    "title": "Nuestros Proyectos",
+    "subtitle": "Mostrando nuestro trabajo más reciente e innovaciones"
+  },
+  "contact": {
+    "title": "Ponte en Contacto",
+    "subtitle": "¿Listo para comenzar tu próximo proyecto? ¡Hablemos!",
+    "name": "Nombre",
+    "email": "Correo Electrónico",
+    "message": "Mensaje",
+    "sendMessage": "Enviar Mensaje"
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados.",
+    "builtWith": "Construido con ❤️ por DLAY"
+  },
+  "navigation": {
+    "home": "Inicio",
+    "about": "Acerca de",
+    "team": "Equipo",
+    "projects": "Proyectos",
+    "contact": "Contacto"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "metadata": {
+    "title": "DLAY - Programming Team",
+    "description": "We are a team of passionate programmers who transform ideas into software"
+  },
+  "hero": {
+    "title": "We are a team of passionate programmers who transform ideas into software",
+    "subtitle": "From concept to deployment, we bring your digital vision to life with cutting-edge technology and innovative solutions.",
+    "startProject": "Start Your Project",
+    "viewWork": "View Our Work"
+  },
+  "about": {
+    "title": "About DLAY",
+    "ourStory": "Our Story",
+    "storyText1": "DLAY was founded by a group of passionate computer science students who shared a common vision: to bridge the gap between innovative ideas and practical software solutions.",
+    "storyText2": "What started as late-night coding sessions in our university lab has evolved into a dedicated team committed to transforming how businesses approach technology.",
+    "storyText3": "We believe that great software isn't just about clean code—it's about understanding our clients' needs and delivering solutions that make a real difference.",
+    "whatDrivesUs": "What Drives Us",
+    "values": {
+      "trust": {
+        "title": "Trust & Commitment",
+        "description": "We build lasting relationships with our clients through transparency, reliability, and unwavering dedication to their success."
+      },
+      "innovation": {
+        "title": "Innovation",
+        "description": "We stay at the forefront of technology, constantly learning and implementing cutting-edge solutions to solve complex problems."
+      },
+      "collaboration": {
+        "title": "Collaboration",
+        "description": "We believe in the power of teamwork, both within our team and with our clients, to create exceptional results."
+      },
+      "practical": {
+        "title": "Practical Solutions",
+        "description": "We focus on delivering practical, scalable solutions that provide real value and drive meaningful business outcomes."
+      }
+    }
+  },
+  "team": {
+    "title": "Meet Our Team",
+    "subtitle": "The passionate developers behind DLAY"
+  },
+  "projects": {
+    "title": "Our Projects",
+    "subtitle": "Showcasing our latest work and innovations"
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "Ready to start your next project? Let's talk!",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "sendMessage": "Send Message"
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "builtWith": "Built with ❤️ by DLAY"
+  },
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "team": "Team",
+    "projects": "Projects",
+    "contact": "Contact"
+  }
+}

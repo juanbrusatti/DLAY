@@ -1,0 +1,110 @@
+"use client"
+
+import React, { createContext, useContext, useState, useEffect } from 'react'
+
+type Language = 'en' | 'es'
+
+interface LanguageContextType {
+  language: Language
+  setLanguage: (lang: Language) => void
+  t: (key: string) => string
+}
+
+const LanguageContext = createContext<LanguageContextType | undefined>(undefined)
+
+// Traducciones
+const translations = {
+  en: {
+    'metadata.title': 'DLAY - Programming Team',
+    'metadata.description': 'We are a team of passionate programmers who transform ideas into software',
+    'hero.title': 'We are a team of passionate programmers who transform ideas into software',
+    'hero.subtitle': 'From concept to deployment, we bring your digital vision to life with cutting-edge technology and innovative solutions.',
+    'hero.startProject': 'Start Your Project',
+    'hero.viewWork': 'View Our Work',
+    'about.title': 'About DLAY',
+    'about.ourStory': 'Our Story',
+    'about.storyText1': 'DLAY was founded by a group of passionate computer science students who shared a common vision: to bridge the gap between innovative ideas and practical software solutions.',
+    'about.storyText2': 'What started as late-night coding sessions in our university lab has evolved into a dedicated team committed to transforming how businesses approach technology.',
+    'about.storyText3': 'We believe that great software isn\'t just about clean code—it\'s about understanding our clients\' needs and delivering solutions that make a real difference.',
+    'about.whatDrivesUs': 'What Drives Us',
+    'about.values.trust.title': 'Trust & Commitment',
+    'about.values.trust.description': 'We build lasting relationships with our clients through transparency, reliability, and unwavering dedication to their success.',
+    'about.values.innovation.title': 'Innovation',
+    'about.values.innovation.description': 'We stay at the forefront of technology, constantly learning and implementing cutting-edge solutions to solve complex problems.',
+    'about.values.collaboration.title': 'Collaboration',
+    'about.values.collaboration.description': 'We believe in the power of teamwork, both within our team and with our clients, to create exceptional results.',
+    'about.values.practical.title': 'Practical Solutions',
+    'about.values.practical.description': 'We focus on delivering practical, scalable solutions that provide real value and drive meaningful business outcomes.',
+    'team.title': 'Meet Our Team',
+    'team.subtitle': 'The passionate developers behind DLAY',
+    'navigation.home': 'Home',
+    'navigation.about': 'About',
+    'navigation.team': 'Team',
+    'navigation.projects': 'Projects',
+    'navigation.contact': 'Contact'
+  },
+  es: {
+    'metadata.title': 'DLAY - Equipo de Programación',
+    'metadata.description': 'Somos un equipo de programadores apasionados que transformamos ideas en software',
+    'hero.title': 'Somos un equipo de programadores apasionados que transformamos ideas en software',
+    'hero.subtitle': 'Desde el concepto hasta el despliegue, damos vida a tu visión digital con tecnología de vanguardia y soluciones innovadoras.',
+    'hero.startProject': 'Iniciar Tu Proyecto',
+    'hero.viewWork': 'Ver Nuestro Trabajo',
+    'about.title': 'Acerca de DLAY',
+    'about.ourStory': 'Nuestra Historia',
+    'about.storyText1': 'DLAY fue fundado por un grupo de estudiantes apasionados de ciencias de la computación que compartían una visión común: cerrar la brecha entre ideas innovadoras y soluciones de software prácticas.',
+    'about.storyText2': 'Lo que comenzó como sesiones de programación nocturnas en nuestro laboratorio universitario ha evolucionado hacia un equipo dedicado comprometido con transformar cómo las empresas abordan la tecnología.',
+    'about.storyText3': 'Creemos que el gran software no se trata solo de código limpio—se trata de entender las necesidades de nuestros clientes y entregar soluciones que marquen una diferencia real.',
+    'about.whatDrivesUs': 'Lo Que Nos Impulsa',
+    'about.values.trust.title': 'Confianza y Compromiso',
+    'about.values.trust.description': 'Construimos relaciones duraderas con nuestros clientes a través de la transparencia, confiabilidad y dedicación inquebrantable a su éxito.',
+    'about.values.innovation.title': 'Innovación',
+    'about.values.innovation.description': 'Nos mantenemos a la vanguardia de la tecnología, aprendiendo constantemente e implementando soluciones de vanguardia para resolver problemas complejos.',
+    'about.values.collaboration.title': 'Colaboración',
+    'about.values.collaboration.description': 'Creemos en el poder del trabajo en equipo, tanto dentro de nuestro equipo como con nuestros clientes, para crear resultados excepcionales.',
+    'about.values.practical.title': 'Soluciones Prácticas',
+    'about.values.practical.description': 'Nos enfocamos en entregar soluciones prácticas y escalables que proporcionen valor real e impulsen resultados comerciales significativos.',
+    'team.title': 'Conoce Nuestro Equipo',
+    'team.subtitle': 'Los desarrolladores apasionados detrás de DLAY',
+    'navigation.home': 'Inicio',
+    'navigation.about': 'Acerca de',
+    'navigation.team': 'Equipo',
+    'navigation.projects': 'Proyectos',
+    'navigation.contact': 'Contacto'
+  }
+}
+
+export function LanguageProvider({ children }: { children: React.ReactNode }) {
+  const [language, setLanguage] = useState<Language>('en')
+
+  useEffect(() => {
+    // Cargar idioma guardado del localStorage
+    const savedLanguage = localStorage.getItem('language') as Language
+    if (savedLanguage && (savedLanguage === 'en' || savedLanguage === 'es')) {
+      setLanguage(savedLanguage)
+    }
+  }, [])
+
+  useEffect(() => {
+    // Guardar idioma en localStorage
+    localStorage.setItem('language', language)
+  }, [language])
+
+  const t = (key: string): string => {
+    return translations[language][key as keyof typeof translations[typeof language]] || key
+  }
+
+  return (
+    <LanguageContext.Provider value={{ language, setLanguage, t }}>
+      {children}
+    </LanguageContext.Provider>
+  )
+}
+
+export function useLanguage() {
+  const context = useContext(LanguageContext)
+  if (context === undefined) {
+    throw new Error('useLanguage must be used within a LanguageProvider')
+  }
+  return context
+}
