@@ -77,13 +77,13 @@
         "description": "Una plataforma de telemedicina que conecta pacientes con proveedores de atención médica, con videollamadas seguras y programación de citas.",
         "client": "HealthTech Innovations"
       },
-      "smartinventory": {
-        "name": "SmartInventory",
+      "acma-ar-aberturas": {
+        "name": "Acma AR Aberturas",
         "description": "Un sistema de gestión de inventario impulsado por IA que predice las necesidades de stock y automatiza la reordenación para empresas minoristas.",
         "client": "RetailTech Corp"
       },
-      "learnhub": {
-        "name": "LearnHub",
+      "applert": {
+        "name": "Applert",
         "description": "Una plataforma de e-learning interactiva con rutas de aprendizaje personalizadas y seguimiento de progreso para instituciones educativas.",
         "client": "EduTech Academy"
       }

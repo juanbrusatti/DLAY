@@ -32,12 +32,18 @@ const projects = {
   ],
   inProgress: [
     {
-      id: "smartinventory",
+      id: "acma-ar-aberturas",
+      name: "Acma AR Aberturas",
+      client: "AR Aberturas",
+      description: "ACMA es un software avanzado para la industria del vidrio que permite generar presupuestos precisos, gestionar stock de planchas y sobrantes, e integrar un algoritmo de optimización de cortes, reduciendo costos de producción y maximizando la eficiencia operativa de cada proyecto.",
+      descriptionEn: "ACMA is an advanced software for the glass industry that enables precise budget generation, manages sheet and scrap inventory, and integrates a cutting optimization algorithm, reducing production costs and maximizing operational efficiency for each project.",
       image: "/inventory-management-dashboard-with-ai-predictions.jpg",
       technologies: ["Python", "TensorFlow", "React", "FastAPI"],
     },
     {
-      id: "learnhub",
+      id: "applert",
+      name: "Applert",
+      client: "Vlan",
       image: "/e-learning-platform-with-course-interface.jpg",
       technologies: ["Vue.js", "Django", "PostgreSQL", "Redis"],
     },
@@ -45,7 +51,7 @@ const projects = {
 }
 
 export default function ProjectsSection() {
-  const { t } = useLanguage()
+  const { t, language } = useLanguage()
 
   return (
     <section id="projects" className="py-20 bg-muted/30">
@@ -118,7 +124,7 @@ export default function ProjectsSection() {
                 <div className="aspect-video overflow-hidden rounded-t-lg relative">
                   <img
                     src={project.image || "/placeholder.svg"}
-                    alt={t(`projects.items.${project.id}.name`)}
+                    alt={project.name}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                   <div className="absolute top-4 right-4">
@@ -126,11 +132,11 @@ export default function ProjectsSection() {
                   </div>
                 </div>
                 <CardHeader>
-                  <CardTitle className="font-montserrat font-bold text-xl text-foreground">{t(`projects.items.${project.id}.name`)}</CardTitle>
-                  <p className="font-open-sans text-sm text-primary font-semibold">{t(`projects.items.${project.id}.client`)}</p>
+                  <CardTitle className="font-montserrat font-bold text-xl text-foreground">{project.name}</CardTitle>
+                  <p className="font-open-sans text-sm text-primary font-semibold">{project.client}</p>
                 </CardHeader>
                 <CardContent>
-                  <p className="font-open-sans text-sm text-muted-foreground mb-4 text-pretty">{t(`projects.items.${project.id}.description`)}</p>
+                  <p className="font-open-sans text-sm text-muted-foreground mb-4 text-pretty">{project.descriptionEn && language === 'en' ? project.descriptionEn : project.description || t(`projects.items.${project.id}.description`)}</p>
 
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.technologies.map((tech, techIndex) => (
