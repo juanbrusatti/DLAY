@@ -44,8 +44,10 @@ const projects = {
       id: "applert",
       name: "Applert",
       client: "Vlan",
+      description: "APPLERT es una aplicación móvil de seguridad ciudadana que permite enviar alertas de emergencia con un solo toque a entidades de respuesta rápida como policía, bomberos y servicios médicos. La plataforma transmite la ubicación en tiempo real del usuario y mantiene un canal de comunicación directo con las autoridades, además de incluir una sección de noticias donde las entidades publican información relevante sobre eventos y situaciones en la ciudad.",
+      descriptionEn: "APPLERT is a citizen security mobile application that allows sending emergency alerts with a single touch to rapid response entities such as police, firefighters, and medical services. The platform transmits the user's real-time location and maintains direct communication with authorities, plus includes a news section where entities publish relevant information about events and situations in the city.",
       image: "/e-learning-platform-with-course-interface.jpg",
-      technologies: ["Vue.js", "Django", "PostgreSQL", "Redis"],
+      technologies: ["React Native", "JavaScript", "Tailwind CSS", "Firebase"],
     },
   ],
 }
