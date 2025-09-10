@@ -37,11 +37,57 @@
   },
   "team": {
     "title": "Meet Our Team",
-    "subtitle": "The passionate developers behind DLAY"
+    "subtitle": "The passionate developers behind DLAY",
+    "members": {
+      "juan": {
+        "description": "Computer Science student specializing in frontend design, creating beautiful and responsive user interfaces whith modern technologies."
+      },
+      "jeremias": {
+        "description": "Computer Science student focused on backend development, specializing in scalable server architectures and database optimization."
+      },
+      "mateo": {
+        "description": "Computer Science student with full stack experience, connecting frontend and backend to create complete and optimized user experiences."
+      },
+      "maximo": {
+        "description": "Computer Science student full stack, combining frontend and backend development with focus on comprehensive and scalable solutions."
+      }
+    }
   },
   "projects": {
     "title": "Our Projects",
-    "subtitle": "Showcasing our latest work and innovations"
+    "subtitle": "Showcasing our latest work and innovations",
+    "completed": "Completed Projects",
+    "inProgress": "In Progress",
+    "demo": "Demo",
+    "code": "Code",
+    "expected": "Expected Completion",
+    "items": {
+      "ecotrack": {
+        "name": "EcoTrack",
+        "description": "A sustainability tracking app that helps businesses monitor and reduce their carbon footprint through data visualization and actionable insights.",
+        "client": "GreenTech Solutions"
+      },
+      "taskflow": {
+        "name": "TaskFlow",
+        "description": "A collaborative project management platform designed for remote teams, featuring real-time updates and integrated communication tools.",
+        "client": "RemoteWork Inc."
+      },
+      "mediconnect": {
+        "name": "MediConnect",
+        "description": "A telemedicine platform connecting patients with healthcare providers, featuring secure video calls and appointment scheduling.",
+        "client": "HealthTech Innovations"
+      },
+      "smartinventory": {
+        "name": "SmartInventory",
+        "description": "An AI-powered inventory management system that predicts stock needs and automates reordering for retail businesses.",
+        "client": "RetailTech Corp"
+      },
+      "learnhub": {
+        "name": "LearnHub",
+        "description": "An interactive e-learning platform with personalized learning paths and progress tracking for educational institutions.",
+        "client": "EduTech Academy"
+      }
+    }
   },
   "contact": {
     "title": "Get In Touch",

@@ -37,11 +37,57 @@
   },
   "team": {
     "title": "Conoce Nuestro Equipo",
-    "subtitle": "Los desarrolladores apasionados detrás de DLAY"
+    "subtitle": "Los desarrolladores apasionados detrás de DLAY",
+    "members": {
+      "juan": {
+        "description": "Estudiante de Ciencias de la Computación especializado en diseño frontend, creando interfaces de usuario hermosas y responsivas con tecnologías modernas."
+      },
+      "jeremias": {
+        "description": "Estudiante de Ciencias de la Computación enfocado en desarrollo backend, especializado en arquitecturas de servidor escalables y optimización de bases de datos."
+      },
+      "mateo": {
+        "description": "Estudiante de Ciencias de la Computación con experiencia full stack, conectando frontend y backend para crear experiencias de usuario completas y optimizadas."
+      },
+      "maximo": {
+        "description": "Estudiante de Ciencias de la Computación full stack, combinando desarrollo frontend y backend con enfoque en soluciones integrales y escalables."
+      }
+    }
   },
   "projects": {
     "title": "Nuestros Proyectos",
-    "subtitle": "Mostrando nuestro trabajo más reciente e innovaciones"
+    "subtitle": "Mostrando nuestro trabajo más reciente e innovaciones",
+    "completed": "Proyectos Completados",
+    "inProgress": "En Progreso",
+    "demo": "Demo",
+    "code": "Código",
+    "expected": "Finalización Esperada",
+    "items": {
+      "ecotrack": {
+        "name": "EcoTrack",
+        "description": "Una aplicación de seguimiento de sostenibilidad que ayuda a las empresas a monitorear y reducir su huella de carbono a través de visualización de datos e insights accionables.",
+        "client": "GreenTech Solutions"
+      },
+      "taskflow": {
+        "name": "TaskFlow",
+        "description": "Una plataforma de gestión de proyectos colaborativa diseñada para equipos remotos, con actualizaciones en tiempo real y herramientas de comunicación integradas.",
+        "client": "RemoteWork Inc."
+      },
+      "mediconnect": {
+        "name": "MediConnect",
+        "description": "Una plataforma de telemedicina que conecta pacientes con proveedores de atención médica, con videollamadas seguras y programación de citas.",
+        "client": "HealthTech Innovations"
+      },
+      "smartinventory": {
+        "name": "SmartInventory",
+        "description": "Un sistema de gestión de inventario impulsado por IA que predice las necesidades de stock y automatiza la reordenación para empresas minoristas.",
+        "client": "RetailTech Corp"
+      },
+      "learnhub": {
+        "name": "LearnHub",
+        "description": "Una plataforma de e-learning interactiva con rutas de aprendizaje personalizadas y seguimiento de progreso para instituciones educativas.",
+        "client": "EduTech Academy"
+      }
+    }
   },
   "contact": {
     "title": "Ponte en Contacto",

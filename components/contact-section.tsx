@@ -39,8 +39,8 @@ export default function ContactSection() {
         <div className="max-w-4xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16">
-            <h2 className="font-montserrat font-black text-3xl md:text-4xl lg:text-5xl text-foreground mb-4">
-              {t('contact.title')} <span className="text-primary">Connect</span>
+            <h2 className="font-montserrat font-black text-3xl md:text-4xl lg:text-5xl text-primary mb-4">
+              {t('contact.title')}
             </h2>
             <p className="font-open-sans text-lg text-muted-foreground max-w-2xl mx-auto text-pretty mb-6">
               {t('contact.subtitle')}
@@ -118,10 +118,10 @@ export default function ContactSection() {
                         {t('contact.emailDescription')}
                       </p>
                       <a
-                        href="mailto:hello@dlay.dev"
+                        href="mailto:dlay.contac@gmail.com"
                         className="font-open-sans text-primary hover:text-primary/80 transition-colors font-semibold"
                       >
-                        hello@dlay.dev
+                        dlay.contact@gmail.com
                       </a>
                     </div>
                   </div>
@@ -140,7 +140,7 @@ export default function ContactSection() {
                       <h3 className="font-montserrat font-bold text-lg text-foreground mb-2">{t('contact.whatsapp')}</h3>
                       <p className="font-open-sans text-muted-foreground mb-2">{t('contact.whatsappDescription')}</p>
                       <a
-                        href="https://wa.me/1234567890"
+                        href="https://wa.me/543584178955"
                         className="font-open-sans text-primary hover:text-primary/80 transition-colors font-semibold"
                         target="_blank"
                         rel="noopener noreferrer"

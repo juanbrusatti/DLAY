@@ -7,25 +7,23 @@ import { useLanguage } from "@/contexts/language-context"
 
 const teamMembers = [
   {
+    id: "juan",
     name: "Juan Brusatti",
-    role: "Frontend Developer",
-    description:
-      "Computer Science student passionate about creating beautiful, responsive user interfaces with React and modern web technologies.",
+    role: "Full Stack Developer",
     avatar: "/professional-headshot-of-young-hispanic-male-devel.jpg",
-    skills: ["React", "TypeScript", "Tailwind CSS"],
+    skills: ["React", "TypeScript", "Tailwind CSS", "JavaScript"],
     social: {
       github: "#",
       linkedin: "#",
-      email: "alex@dlay.dev",
+      email: "juanbrusatti@gmail.com",
     },
   },
   {
+    id: "jeremias",
     name: "Jeremias Avaro",
-    role: "Backend Developer",
-    description:
-      "Computer Science student specializing in scalable server architectures and database optimization for high-performance applications.",
+    role: "Full Stack Developer",
     avatar: "/professional-headshot-of-young-asian-female-develo.jpg",
-    skills: ["Node.js", "Python", "PostgreSQL"],
+    skills: ["Ruby", "Rails","Python", "PostgreSQL", "React"],
     social: {
       github: "#",
       linkedin: "#",
@@ -33,12 +31,11 @@ const teamMembers = [
     },
   },
   {
+    id: "mateo",
     name: "Mateo Cornejo",
     role: "Full Stack Developer",
-    description:
-      "Computer Science student who bridges frontend and backend, ensuring seamless integration and optimal user experiences.",
     avatar: "/professional-headshot-of-young-black-male-develope.jpg",
-    skills: ["Next.js", "Express", "MongoDB"],
+    skills: ["React", "TypeScript", "PostgreSQL", "JavaScript"],
     social: {
       github: "#",
       linkedin: "#",
@@ -46,12 +43,11 @@ const teamMembers = [
     },
   },
   {
+    id: "maximo",
     name: "Maximo Marquez",
-    role: "Full Stack Developer ",
-    description:
-      "Computer Science student focused on user-centered design principles, creating intuitive interfaces that solve real-world problems.",
+    role: "Full Stack Developer",
     avatar: "/professional-headshot-of-young-caucasian-female-de.jpg",
-    skills: ["Figma", "User Research", "Prototyping"],
+    skills: ["React", "TypeScript", "PostgreSQL", "JavaScript"],
     social: {
       github: "#",
       linkedin: "#",
@@ -93,7 +89,7 @@ export default function TeamSection() {
                 <p className="font-open-sans text-primary font-semibold mb-3">{member.role}</p>
 
                 {/* Description */}
-                <p className="font-open-sans text-sm text-muted-foreground mb-4 text-pretty">{member.description}</p>
+                <p className="font-open-sans text-sm text-muted-foreground mb-4 text-pretty">{t(`team.members.${member.id}.description`)}</p>
 
                 {/* Skills */}
                 <div className="flex flex-wrap gap-2 justify-center mb-4">
