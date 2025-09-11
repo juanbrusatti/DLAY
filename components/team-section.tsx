@@ -10,7 +10,7 @@ const teamMembers = [
     id: "juan",
     name: "Juan Brusatti",
     role: "Full Stack Developer",
-    avatar: "/professional-headshot-of-young-hispanic-male-devel.jpg",
+    avatar: "/juan.jpg",
     skills: ["React", "TypeScript", "Tailwind CSS", "JavaScript"],
     social: {
       github: "#",
@@ -22,7 +22,7 @@ const teamMembers = [
     id: "jeremias",
     name: "Jeremias Avaro",
     role: "Full Stack Developer",
-    avatar: "/professional-headshot-of-young-asian-female-develo.jpg",
+    avatar: "/jeremias.png",
     skills: ["Ruby", "Rails","Python", "PostgreSQL", "React"],
     social: {
       github: "#",
@@ -34,7 +34,7 @@ const teamMembers = [
     id: "mateo",
     name: "Mateo Cornejo",
     role: "Full Stack Developer",
-    avatar: "/professional-headshot-of-young-black-male-develope.jpg",
+    avatar: "/mateo.png",
     skills: ["React", "TypeScript", "PostgreSQL", "JavaScript"],
     social: {
       github: "#",
@@ -46,7 +46,7 @@ const teamMembers = [
     id: "maximo",
     name: "Maximo Marquez",
     role: "Full Stack Developer",
-    avatar: "/professional-headshot-of-young-caucasian-female-de.jpg",
+    avatar: "/maximo.png",
     skills: ["React", "TypeScript", "PostgreSQL", "JavaScript"],
     social: {
       github: "#",
