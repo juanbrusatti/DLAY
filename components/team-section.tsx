@@ -13,7 +13,7 @@ const teamMembers = [
     avatar: "/juan.jpg",
     skills: ["React", "TypeScript", "Tailwind CSS", "JavaScript"],
     social: {
-      github: "#",
+      github: "https://github.com/juanbrusatti",
       linkedin: "#",
       email: "juanbrusatti@gmail.com",
     },
@@ -25,9 +25,9 @@ const teamMembers = [
     avatar: "/jeremias.png",
     skills: ["Ruby", "Rails","Python", "PostgreSQL", "React"],
     social: {
-      github: "#",
+      github: "https://github.com/jeremiasavaro",
       linkedin: "#",
-      email: "sarah@dlay.dev",
+      email: "jeremias@dlay.dev",
     },
   },
   {
@@ -37,9 +37,9 @@ const teamMembers = [
     avatar: "/mateo.png",
     skills: ["React", "TypeScript", "PostgreSQL", "JavaScript"],
     social: {
-      github: "#",
+      github: "https://github.com/CornejoMateo",
       linkedin: "#",
-      email: "marcus@dlay.dev",
+      email: "mateo@dlay.dev",
     },
   },
   {
@@ -49,9 +49,9 @@ const teamMembers = [
     avatar: "/maximo.png",
     skills: ["React", "TypeScript", "PostgreSQL", "JavaScript"],
     social: {
-      github: "#",
+      github: "https://github.com/maximarquezregis",
       linkedin: "#",
-      email: "emma@dlay.dev",
+      email: "maximo@dlay.dev",
     },
   },
 ]
