@@ -10,9 +10,16 @@ const projects = {
   completed: [
     {
       id: "ecotrack",
-      image: "/modern-dashboard-showing-environmental-data-and-ch.jpg",
-      technologies: ["React", "Node.js", "PostgreSQL", "Chart.js"],
-      demoUrl: "#",
+      name: "Roswell Indumentaria",
+      client: "roswell.com.ar",
+      clientUrl: "https://roswell.com.ar",
+      description:
+        "Sitio de catálogo de indumentaria masculina con carrito que envía pedidos por WhatsApp con mensajes predefinidos según los productos seleccionados.",
+      descriptionEn:
+        "Menswear catalog website with a cart that sends orders via WhatsApp using predefined messages based on selected items.",
+      image: "/roswell.png",
+      technologies: ["Supabase", "Tailwind CSS", "Next.js"],
+      demoUrl: "https://roswell.com.ar",
       githubUrl: "#",
     },
     {
@@ -79,16 +86,31 @@ export default function ProjectsSection() {
                 <div className="aspect-video overflow-hidden rounded-t-lg">
                   <img
                     src={project.image || "/placeholder.svg"}
-                    alt={t(`projects.items.${project.id}.name`)}
+                    alt={project.name || t(`projects.items.${project.id}.name`)}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
                 <CardHeader>
-                  <CardTitle className="font-montserrat font-bold text-xl text-foreground">{t(`projects.items.${project.id}.name`)}</CardTitle>
-                  <p className="font-open-sans text-sm text-primary font-semibold">{t(`projects.items.${project.id}.client`)}</p>
+                  <CardTitle className="font-montserrat font-bold text-xl text-foreground">{project.name || t(`projects.items.${project.id}.name`)}</CardTitle>
+                  {project.clientUrl ? (
+                    <a
+                      href={project.clientUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-open-sans text-sm text-primary font-semibold hover:text-primary/80 transition-colors"
+                    >
+                      {project.client}
+                    </a>
+                  ) : (
+                    <p className="font-open-sans text-sm text-primary font-semibold">{t(`projects.items.${project.id}.client`)}</p>
+                  )}
                 </CardHeader>
                 <CardContent>
-                  <p className="font-open-sans text-sm text-muted-foreground mb-4 text-pretty">{t(`projects.items.${project.id}.description`)}</p>
+                  <p className="font-open-sans text-sm text-muted-foreground mb-4 text-pretty">
+                    {project.descriptionEn && language === 'en'
+                      ? project.descriptionEn
+                      : project.description || t(`projects.items.${project.id}.description`)}
+                  </p>
 
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.technologies.map((tech, techIndex) => (
@@ -99,13 +121,17 @@ export default function ProjectsSection() {
                   </div>
 
                   <div className="flex space-x-2">
-                    <Button size="sm" variant="outline" className="flex-1 bg-transparent">
-                      <ExternalLink className="w-4 h-4 mr-2" />
-                      {t('projects.demo')}
+                    <Button size="sm" variant="outline" className="flex-1 bg-transparent" asChild>
+                      <a href={project.demoUrl || '#'} target="_blank" rel="noopener noreferrer">
+                        <ExternalLink className="w-4 h-4 mr-2" />
+                        {t('projects.demo')}
+                      </a>
                     </Button>
-                    <Button size="sm" variant="outline" className="flex-1 bg-transparent">
-                      <Github className="w-4 h-4 mr-2" />
-                      {t('projects.code')}
+                    <Button size="sm" variant="outline" className="flex-1 bg-transparent" asChild>
+                      <a href={project.githubUrl || '#'} target="_blank" rel="noopener noreferrer">
+                        <Github className="w-4 h-4 mr-2" />
+                        {t('projects.code')}
+                      </a>
                     </Button>
                   </div>
                 </CardContent>
