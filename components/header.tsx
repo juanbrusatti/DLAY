@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 import { useLanguage } from "@/contexts/language-context"
 import LanguageToggle from "./language-toggle"
+import ThemeToggle from "./theme-toggle"
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -63,9 +64,10 @@ export default function Header() {
           </button>
         </nav>
 
-        {/* Language Toggle & CTA Button */}
+        {/* Language Toggle, Theme Toggle & CTA Button */}
         <div className="hidden md:flex items-center space-x-4">
           <LanguageToggle />
+          <ThemeToggle />
                <Button
                  onClick={() => scrollToSection("contact")}
                  className="bg-primary hover:bg-primary/90 text-primary-foreground font-open-sans font-semibold"
@@ -115,7 +117,10 @@ export default function Header() {
               {t('navigation.contact')}
             </button>
             <div className="flex items-center justify-between pt-2">
-              <LanguageToggle />
+              <div className="flex items-center space-x-2">
+                <LanguageToggle />
+                <ThemeToggle />
+              </div>
                <Button
                  onClick={() => scrollToSection("contact")}
                  className="bg-primary hover:bg-primary/90 text-primary-foreground font-open-sans font-semibold"
