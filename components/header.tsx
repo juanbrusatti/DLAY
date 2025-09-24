@@ -24,9 +24,9 @@ export default function Header() {
         {/* Logo */}
         <div className="flex items-center space-x-2">
           <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-            <span className="text-primary-foreground font-bold text-lg">D</span>
+            <span className="text-primary-foreground font-bold text-lg">=D</span>
           </div>
-          <span className="font-montserrat font-black text-xl text-foreground">=DLAY</span>
+          <span className="font-montserrat font-black text-xl text-foreground">DLAY</span>
         </div>
 
         {/* Desktop Navigation */}
