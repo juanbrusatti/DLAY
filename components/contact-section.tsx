@@ -20,8 +20,12 @@ export default function ContactSection() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission here
-    console.log("Form submitted:", formData)
+
+    const whatsappMessage = `Hola, mi nombre es ${formData.name}. Mi email es ${formData.email}. Quiero hablar sobre: ${formData.message}`
+    const whatsappURL = `https://wa.me/543584178955?text=${encodeURIComponent(whatsappMessage)}`
+
+    window.open(whatsappURL, "_blank")
+
     // Reset form
     setFormData({ name: "", email: "", message: "" })
   }
