@@ -9,6 +9,18 @@ import { useLanguage } from "@/contexts/language-context"
 const projects = {
   completed: [
     {
+      id: "acma-ar-aberturas",
+      name: "Acma AR Aberturas",
+      client: "AR Aberturas",
+      clientUrl: "#",
+      description: "ACMA es un software avanzado para la industria del vidrio que permite generar presupuestos precisos, gestionar stock de planchas y sobrantes, e integrar un algoritmo de optimización de cortes, reduciendo costos de producción y maximizando la eficiencia operativa de cada proyecto.",
+      descriptionEn: "ACMA is an advanced software for the glass industry that enables precise budget generation, manages sheet and scrap inventory, and integrates a cutting optimization algorithm, reducing production costs and maximizing operational efficiency for each project.",
+      image: "/captura-acma.png",
+      technologies: ["Python", "Ruby", "JavaScript", "Tailwind CSS", "PostgreSQL"],
+      demoUrl: "#",
+      githubUrl: "#",
+    },
+    {
       id: "ecotrack",
       name: "Roswell Indumentaria",
       client: "roswell.com.ar",
@@ -38,15 +50,6 @@ const projects = {
     },
   ],
   inProgress: [
-    {
-      id: "acma-ar-aberturas",
-      name: "Acma AR Aberturas",
-      client: "AR Aberturas",
-      description: "ACMA es un software avanzado para la industria del vidrio que permite generar presupuestos precisos, gestionar stock de planchas y sobrantes, e integrar un algoritmo de optimización de cortes, reduciendo costos de producción y maximizando la eficiencia operativa de cada proyecto.",
-      descriptionEn: "ACMA is an advanced software for the glass industry that enables precise budget generation, manages sheet and scrap inventory, and integrates a cutting optimization algorithm, reducing production costs and maximizing operational efficiency for each project.",
-      image: "/captura-acma.png",
-      technologies: ["Python", "Ruby","JavaScript", "Tailwind CSS", "PostgreSQL"],
-    },
     {
       id: "applert",
       name: "Applert",
