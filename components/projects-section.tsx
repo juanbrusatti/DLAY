@@ -51,6 +51,18 @@ const projects = {
   ],
   inProgress: [
     {
+      id: "aberturito",
+      name: "Aberturito",
+      client: "AR Aberturas",
+      clientUrl: "#",
+      description: "Sistema integral de gestión interna para AR Aberturas que conecta todos los departamentos (administración, fábrica, colocadores, ventas y marketing) en una sola plataforma. Facilita la comunicación, el seguimiento de órdenes y la gestión de proyectos, mejorando la eficiencia operativa y la colaboración entre equipos.",
+      descriptionEn: "Comprehensive internal management system for AR Aberturas that connects all departments (administration, factory, installers, sales, and marketing) in a single platform. Streamlines communication, order tracking, and project management, enhancing operational efficiency and team collaboration.",
+      image: "/Aberturito.png",
+      technologies: ["Next.js", "Tailwind CSS", "Vercel", "Firebase", "SQL"],
+      demoUrl: "https://v0-responsive-web-demo-5o9ovubli.vercel.app",
+      githubUrl: "#",
+    },
+    {
       id: "applert",
       name: "Applert",
       client: "Vlan",
