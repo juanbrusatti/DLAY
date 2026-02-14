@@ -68,7 +68,7 @@ const translations = {
     'footer.getInTouch': 'Get in Touch',
     'footer.madeWith': 'Made with',
     'footer.byTeam': 'by the DLAY team',
-    'footer.copyright': '© 2025 DLAY. All rights reserved.',
+    'footer.copyright': '© 2026 DLAY. All rights reserved.',
     'navigation.home': 'Home',
     'navigation.about': 'About',
     'navigation.team': 'Team',
@@ -130,7 +130,7 @@ const translations = {
     'footer.getInTouch': 'Ponte en Contacto',
     'footer.madeWith': 'Hecho con',
     'footer.byTeam': 'por el equipo DLAY',
-    'footer.copyright': '© 2025 DLAY. Todos los derechos reservados.',
+    'footer.copyright': '© 2026 DLAY. Todos los derechos reservados.',
     'navigation.home': 'Inicio',
     'navigation.about': 'Acerca de',
     'navigation.team': 'Equipo',
@@ -157,7 +157,21 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   }, [language])
 
   const t = (key: string): string => {
-    return translations[language][key as keyof typeof translations[typeof language]] || key
+    const direct = (translations[language] as Record<string, unknown>)[key]
+    if (typeof direct === 'string') return direct
+
+    const parts = key.split('.')
+    let current: unknown = translations[language]
+
+    for (const part of parts) {
+      if (current && typeof current === 'object' && part in (current as Record<string, unknown>)) {
+        current = (current as Record<string, unknown>)[part]
+      } else {
+        return key
+      }
+    }
+
+    return typeof current === 'string' ? current : key
   }
 
   return (
