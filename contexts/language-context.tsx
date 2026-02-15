@@ -68,13 +68,19 @@ const translations = {
     'footer.getInTouch': 'Get in Touch',
     'footer.madeWith': 'Made with',
     'footer.byTeam': 'by the DLAY team',
-    'footer.copyright': '© 2026 DLAY. All rights reserved.',
+    'footer.copyright': ' 2026 DLAY. All rights reserved.',
     'navigation.home': 'Home',
     'navigation.about': 'About',
     'navigation.team': 'Team',
     'navigation.projects': 'Projects',
     'navigation.contact': 'Contact',
-    'navigation.letsWorkTogether': 'Let\'s work together'
+    'navigation.letsWorkTogether': "Let's Work Together",
+    'stats.title': 'Our Achievements',
+    'stats.subtitle': 'Numbers that demonstrate our commitment and experience',
+    'stats.projectsCompleted': 'Projects Completed',
+    'stats.satisfiedClients': 'Satisfied Clients',
+    'stats.continuousSupport': '24/7 Support',
+    'stats.yearsExperience': 'Years of Experience'
   },
   es: {
     'metadata.title': 'DLAY - Equipo de Programación',
@@ -136,12 +142,18 @@ const translations = {
     'navigation.team': 'Equipo',
     'navigation.projects': 'Proyectos',
     'navigation.contact': 'Contacto',
-    'navigation.letsWorkTogether': 'Trabajemos juntos'
+    'navigation.letsWorkTogether': 'Trabajemos juntos',
+    'stats.title': 'Nuestros Logros',
+    'stats.subtitle': 'Números que demuestran nuestro compromiso y experiencia',
+    'stats.projectsCompleted': 'Proyectos Completados',
+    'stats.satisfiedClients': 'Clientes Satisfechos',
+    'stats.continuousSupport': 'Soporte Continuo',
+    'stats.yearsExperience': 'Años de Experiencia'
   }
 }
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
-  const [language, setLanguage] = useState<Language>('en')
+  const [language, setLanguage] = useState<Language>('es')
 
   useEffect(() => {
     // Cargar idioma guardado del localStorage

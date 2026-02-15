@@ -128,3 +128,188 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  .animate-gradient {
+    background-size: 200% 200%;
+    animation: gradient 3s ease infinite;
+  }
+  
+  @keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  .bg-300 {
+    background-size: 300% 300%;
+  }
+  
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-fadeInUp {
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+  
+  /* Typography utilities */
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .text-pretty {
+    text-wrap: pretty;
+  }
+  
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  .line-clamp-4 {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  /* Spacing utilities */
+  .space-y-1 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(0.25rem * var(--tw-space-y-reverse));
+  }
+  
+  .space-y-2 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
+  }
+  
+  .space-y-3 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
+  }
+  
+  .space-y-4 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+  }
+  
+  /* Glitch animations */
+  @keyframes glitch-1 {
+    0%, 100% {
+      clip-path: inset(0 0 0 0);
+      transform: translate(-2px, 2px);
+    }
+    20% {
+      clip-path: inset(20% 0 30% 0);
+      transform: translate(2px, -2px);
+    }
+    40% {
+      clip-path: inset(50% 0 20% 0);
+      transform: translate(-2px, 2px);
+    }
+    60% {
+      clip-path: inset(10% 0 60% 0);
+      transform: translate(2px, -2px);
+    }
+    80% {
+      clip-path: inset(80% 0 5% 0);
+      transform: translate(-2px, 2px);
+    }
+  }
+  
+  @keyframes glitch-2 {
+    0%, 100% {
+      clip-path: inset(0 0 0 0);
+      transform: translate(2px, -2px);
+    }
+    20% {
+      clip-path: inset(60% 0 10% 0);
+      transform: translate(-2px, 2px);
+    }
+    40% {
+      clip-path: inset(20% 0 50% 0);
+      transform: translate(2px, -2px);
+    }
+    60% {
+      clip-path: inset(30% 0 40% 0);
+      transform: translate(-2px, 2px);
+    }
+    80% {
+      clip-path: inset(5% 0 80% 0);
+      transform: translate(2px, -2px);
+    }
+  }
+  
+  @keyframes glow {
+    0% {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    50% {
+      opacity: 0.5;
+      transform: scale(1.1);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(1.2);
+    }
+  }
+  
+  /* Neon text effect */
+  .neon-text {
+    text-shadow: 
+      0 0 10px currentColor,
+      0 0 20px currentColor,
+      0 0 30px currentColor,
+      0 0 40px var(--primary),
+      0 0 70px var(--primary),
+      0 0 80px var(--primary),
+      0 0 100px var(--primary),
+      0 0 150px var(--primary);
+  }
+  
+  .neon-border {
+    box-shadow: 
+      0 0 10px var(--primary),
+      0 0 20px var(--primary),
+      0 0 30px var(--primary),
+      0 0 40px var(--primary);
+  }
+  
+  /* Hide default cursor */
+  * {
+    cursor: none !important;
+  }
+  
+  /* Show default cursor for text inputs and textareas */
+  input, textarea, select {
+    cursor: text !important;
+  }
+  
+  /* Show default cursor for links when hovering */
+  a:hover {
+    cursor: pointer !important;
+  }
+}
