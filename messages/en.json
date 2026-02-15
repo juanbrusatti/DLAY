@@ -106,6 +106,15 @@
     "about": "About",
     "team": "Team",
     "projects": "Projects",
-    "contact": "Contact"
+    "contact": "Contact",
+    "letsWorkTogether": "Let's Work Together"
+  },
+  "stats": {
+    "title": "Our Achievements",
+    "subtitle": "Numbers that demonstrate our commitment and experience",
+    "projectsCompleted": "Projects Completed",
+    "satisfiedClients": "Satisfied Clients",
+    "continuousSupport": "24/7 Support",
+    "yearsExperience": "Years of Experience"
   }
 }

@@ -106,6 +106,15 @@
     "about": "Acerca de",
     "team": "Equipo",
     "projects": "Proyectos",
-    "contact": "Contacto"
+    "contact": "Contacto",
+    "letsWorkTogether": "Trabajemos juntos"
+  },
+  "stats": {
+    "title": "Nuestros Logros",
+    "subtitle": "Números que demuestran nuestro compromiso y experiencia",
+    "projectsCompleted": "Proyectos Completados",
+    "satisfiedClients": "Clientes Satisfechos",
+    "continuousSupport": "Soporte Continuo",
+    "yearsExperience": "Años de Experiencia"
   }
 }

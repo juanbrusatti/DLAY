@@ -38,49 +38,49 @@ export default function HeroSection() {
       {/* Animated Background */}
       <div className="absolute inset-0">
         {/* Gradient Orbs */}
-        <div className="absolute top-0 left-0 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-accent/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse delay-500"></div>
+        <div className="absolute top-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-primary/3 rounded-full blur-3xl animate-pulse delay-500"></div>
         
         {/* Floating Elements */}
         <div 
-          className="absolute top-20 left-20 w-32 h-32 border border-primary/20 rounded-lg backdrop-blur-sm bg-primary/5 transition-transform duration-300 ease-out"
+          className="absolute top-20 left-20 w-32 h-32 border border-primary/10 rounded-lg backdrop-blur-sm bg-primary/2 transition-transform duration-300 ease-out"
           style={{
             transform: `translate(${mousePosition.x * 0.5}px, ${mousePosition.y * 0.5}px) rotate(12deg)`
           }}
         >
           <div className="absolute inset-0 flex items-center justify-center">
-            <Sparkles className="w-8 h-8 text-primary/40" />
+            <Sparkles className="w-8 h-8 text-primary/20" />
           </div>
         </div>
         <div 
-          className="absolute top-40 right-32 w-24 h-24 border border-accent/20 rounded-lg backdrop-blur-sm bg-accent/5 transition-transform duration-300 ease-out"
+          className="absolute top-40 right-32 w-24 h-24 border border-accent/10 rounded-lg backdrop-blur-sm bg-accent/2 transition-transform duration-300 ease-out"
           style={{
             transform: `translate(${mousePosition.x * -0.3}px, ${mousePosition.y * -0.3}px) rotate(-12deg)`
           }}
         >
           <div className="absolute inset-0 flex items-center justify-center">
-            <Zap className="w-6 h-6 text-accent/40" />
+            <Zap className="w-6 h-6 text-accent/20" />
           </div>
         </div>
         <div 
-          className="absolute bottom-32 left-32 w-40 h-40 border border-primary/20 rounded-lg backdrop-blur-sm bg-primary/5 transition-transform duration-300 ease-out"
+          className="absolute bottom-32 left-32 w-40 h-40 border border-primary/10 rounded-lg backdrop-blur-sm bg-primary/2 transition-transform duration-300 ease-out"
           style={{
             transform: `translate(${mousePosition.x * 0.3}px, ${mousePosition.y * 0.3}px) rotate(45deg)`
           }}
         >
           <div className="absolute inset-0 flex items-center justify-center">
-            <Code2 className="w-8 h-8 text-primary/40" />
+            <Code2 className="w-8 h-8 text-primary/20" />
           </div>
         </div>
         <div 
-          className="absolute bottom-20 right-20 w-28 h-28 border border-accent/20 rounded-lg backdrop-blur-sm bg-accent/5 transition-transform duration-300 ease-out"
+          className="absolute bottom-20 right-20 w-28 h-28 border border-accent/10 rounded-lg backdrop-blur-sm bg-accent/2 transition-transform duration-300 ease-out"
           style={{
             transform: `translate(${mousePosition.x * -0.5}px, ${mousePosition.y * -0.5}px) rotate(-45deg)`
           }}
         >
           <div className="absolute inset-0 flex items-center justify-center">
-            <Sparkles className="w-6 h-6 text-accent/40" />
+            <Sparkles className="w-6 h-6 text-accent/20" />
           </div>
         </div>
       </div>

@@ -12,6 +12,7 @@ export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
   const { t } = useLanguage()
 
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20)
@@ -87,7 +88,9 @@ export default function Header() {
           <LanguageToggle />
           <ThemeToggle />
           <Button
-            onClick={() => scrollToSection("contact")}
+            onClick={() => {
+              scrollToSection("contact")
+            }}
             className="bg-primary hover:bg-primary/90 text-primary-foreground font-open-sans font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/25"
           >
             {t('navigation.letsWorkTogether')}
