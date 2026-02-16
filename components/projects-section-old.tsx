@@ -25,13 +25,12 @@ const projects = {
       id: "aberturito",
       name: "Aberturito",
       client: "AR Aberturas",
-      clientUrl: "#",
+      clientUrl: "https://araberturas.com",
       description: "Sistema integral de gestión interna para AR Aberturas que conecta todos los departamentos (administración, fábrica, colocadores, ventas y marketing) en una sola plataforma. Facilita la comunicación, el seguimiento de órdenes y la gestión de proyectos, mejorando la eficiencia operativa y la colaboración entre equipos.",
       descriptionEn: "Comprehensive internal management system for AR Aberturas that connects all departments (administration, factory, installers, sales, and marketing) in a single platform. Streamlines communication, order tracking, and project management, enhancing operational efficiency and team collaboration.",
       image: "/Aberturito.png",
       technologies: ["Next.js", "Tailwind CSS", "Vercel", "Firebase", "SQL"],
       landingUrl: "/aberturito",
-      demoUrl: "https://v0-responsive-web-demo-5o9ovubli.vercel.app",
       githubUrl: "https://github.com/CornejoMateo/Aberturito",
     },
     {
@@ -60,7 +59,6 @@ const projects = {
       image: "/e-learning-platform-with-course-interface.jpg",
       technologies: ["React Native", "JavaScript", "Tailwind CSS", "Firebase"],
       landingUrl: "/applert",
-      demoUrl: "#",
       githubUrl: "https://github.com/juanbrusatti/municipalidad-app",
     },
   ],
@@ -70,7 +68,7 @@ export default function ProjectsSection() {
   const { t, language } = useLanguage()
   const [isVisible, setIsVisible] = useState(false)
   const sectionRef = useRef<HTMLElement>(null)
-
+  
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -92,8 +90,8 @@ export default function ProjectsSection() {
     <section ref={sectionRef} id="projects" className="py-20 bg-muted/30 relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute top-0 left-0 w-full h-full">
-        <div className="absolute top-10 left-10 w-32 h-32 bg-primary/10 rounded-full blur-2xl animate-pulse"></div>
-        <div className="absolute bottom-10 right-10 w-40 h-40 bg-accent/10 rounded-full blur-2xl animate-pulse delay-1000"></div>
+        <div className="absolute top-20 left-10 w-32 h-32 bg-primary/10 rounded-full blur-2xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-10 w-40 h-40 bg-accent/10 rounded-full blur-2xl animate-pulse delay-1000"></div>
       </div>
       
       <div className="container mx-auto px-4 relative z-10">
@@ -126,33 +124,42 @@ export default function ProjectsSection() {
                 key={index} 
                 className="group hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 border-0 bg-card/50 backdrop-blur-sm overflow-hidden"
                 style={{
-                  animationDelay: `${index * 100 + 300}ms`,
+                  animationDelay: `${index * 100}ms`,
                   animation: isVisible ? 'fadeInUp 0.6s ease-out forwards' : 'none'
                 }}
               >
                 <div className="aspect-video overflow-hidden relative">
                   <img
                     src={project.image || "/placeholder.svg"}
-                    alt={project.name}
+                    alt={project.name || t(`projects.items.${project.id}.name`)}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
-                  <div className="absolute top-4 right-4">
-                    <Badge className="bg-primary text-primary-foreground px-3 py-1 animate-pulse">
-                      {t('projects.completed')}
-                    </Badge>
-                  </div>
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
                 <CardHeader className="relative">
                   <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-primary/10 to-transparent rounded-bl-2xl"></div>
-                  <CardTitle className="font-montserrat font-bold text-xl text-foreground relative z-10">{project.name}</CardTitle>
-                  <p className="font-open-sans text-sm text-primary font-semibold relative z-10">{project.client}</p>
+                  <CardTitle className="font-montserrat font-bold text-xl text-foreground relative z-10">{project.name || t(`projects.items.${project.id}.name`)}</CardTitle>
+                  {project.clientUrl ? (
+                    <a
+                      href={project.clientUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-open-sans text-sm text-primary font-semibold hover:text-primary/80 transition-colors inline-flex items-center relative z-10"
+                    >
+                      {project.client}
+                      <ArrowRight className="w-3 h-3 ml-1" />
+                    </a>
+                  ) : (
+                    <p className="font-open-sans text-sm text-primary font-semibold relative z-10">{t(`projects.items.${project.id}.client`)}</p>
+                  )}
                 </CardHeader>
                 <CardContent className="relative z-10">
                   <p className="font-open-sans text-sm text-muted-foreground mb-4 text-pretty line-clamp-3">
-                    {project.descriptionEn && language === 'en' ? project.descriptionEn : project.description || t(`projects.items.${project.id}.description`)}
+                    {project.descriptionEn && language === 'en'
+                      ? project.descriptionEn
+                      : project.description || t(`projects.items.${project.id}.description`)}
                   </p>
-                  
+
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.technologies.map((tech, techIndex) => (
                       <Badge 
@@ -249,7 +256,7 @@ export default function ProjectsSection() {
                   <p className="font-open-sans text-sm text-muted-foreground mb-4 text-pretty line-clamp-3">
                     {project.descriptionEn && language === 'en' ? project.descriptionEn : project.description || t(`projects.items.${project.id}.description`)}
                   </p>
-                  
+
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.technologies.map((tech, techIndex) => (
                       <Badge 
@@ -262,41 +269,11 @@ export default function ProjectsSection() {
                     ))}
                   </div>
 
-                  <div className="flex gap-2 mt-4">
-                    {project.landingUrl ? (
-                      <Button 
-                        size="sm" 
-                        className="flex-1 bg-accent hover:bg-accent/90 text-accent-foreground transition-all duration-300 hover:scale-105" 
-                        asChild
-                      >
-                        <a href={project.landingUrl}>
-                          <ArrowRight className="w-4 h-4 mr-2" />
-                          {language === 'es' ? 'Ver Más' : 'Learn More'}
-                        </a>
-                      </Button>
-                    ) : (
-                      <Button 
-                        size="sm" 
-                        className="flex-1 bg-accent hover:bg-accent/90 text-accent-foreground transition-all duration-300 hover:scale-105" 
-                        asChild
-                      >
-                        <a href={project.demoUrl || '#'} target="_blank" rel="noopener noreferrer">
-                          <ExternalLink className="w-4 h-4 mr-2" />
-                          {t('projects.demo')}
-                        </a>
-                      </Button>
-                    )}
-                    <Button 
-                      size="sm" 
-                      variant="outline" 
-                      className="flex-1 bg-transparent border-accent/20 hover:bg-accent hover:text-accent-foreground transition-all duration-300 hover:scale-105" 
-                      asChild
-                    >
-                      <a href={project.githubUrl || '#'} target="_blank" rel="noopener noreferrer">
-                        <Github className="w-4 h-4 mr-2" />
-                        {t('projects.code')}
-                      </a>
-                    </Button>
+                  <div className="flex items-center justify-between">
+                    <span className="font-open-sans text-sm text-muted-foreground flex items-center">
+                      <Clock className="w-4 h-4 mr-2 text-accent" />
+                      {t('projects.expected')}
+                    </span>
                   </div>
                 </CardContent>
               </Card>
