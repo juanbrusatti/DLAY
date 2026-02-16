@@ -30,6 +30,7 @@ const projects = {
       descriptionEn: "Comprehensive internal management system for AR Aberturas that connects all departments (administration, factory, installers, sales, and marketing) in a single platform. Streamlines communication, order tracking, and project management, enhancing operational efficiency and team collaboration.",
       image: "/Aberturito.png",
       technologies: ["Next.js", "Tailwind CSS", "Vercel", "Firebase", "SQL"],
+      landingUrl: "/aberturito",
       demoUrl: "https://v0-responsive-web-demo-5o9ovubli.vercel.app",
       githubUrl: "#",
     },
