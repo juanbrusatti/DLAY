@@ -10,8 +10,8 @@ export default function PageTransition() {
     // Hide loader after content is loaded
     const timer = setTimeout(() => {
       setIsExiting(true)
-      setTimeout(() => setIsLoading(false), 300) // Reduced from 500ms
-    }, 1000) // Reduced from 1500ms
+      setTimeout(() => setIsLoading(false), 500)
+    }, 1500)
 
     return () => clearTimeout(timer)
   }, [])
@@ -27,7 +27,7 @@ export default function PageTransition() {
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-primary via-accent to-primary opacity-10 animate-pulse"></div>
         
         {/* Floating particles */}
-        {[...Array(12)].map((_, i) => (
+        {[...Array(20)].map((_, i) => (
           <div
             key={i}
             className="absolute w-2 h-2 bg-primary rounded-full animate-bounce"
