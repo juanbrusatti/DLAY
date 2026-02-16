@@ -13,13 +13,13 @@ const projects = {
       id: "acma-ar-aberturas",
       name: "Acma AR Aberturas",
       client: "AR Aberturas",
-      clientUrl: "#",
+      clientUrl: "https://araberturas.com",
       description: "ACMA es un software avanzado para la industria del vidrio que permite generar presupuestos precisos, gestionar stock de planchas y sobrantes, e integrar un algoritmo de optimización de cortes, reduciendo costos de producción y maximizando la eficiencia operativa de cada proyecto.",
-      descriptionEn: "ACMA is an advanced software for the glass industry that enables precise budget generation, manages sheet and scrap inventory, and integrates a cutting optimization algorithm, reducing production costs and maximizing operational efficiency for each project.",
+      descriptionEn: "ACMA is an advanced software for glass industry that enables precise budget generation, manages sheet and scrap inventory, and integrates a cutting optimization algorithm, reducing production costs and maximizing operational efficiency for each project.",
       image: "/captura-acma.png",
       technologies: ["Python", "Ruby", "JavaScript", "Tailwind CSS", "PostgreSQL"],
-      demoUrl: "#",
-      githubUrl: "#",
+      landingUrl: "/acma-ar-aberturas",
+      githubUrl: "https://github.com/juanbrusatti/acma",
     },
     {
       id: "aberturito",
@@ -169,18 +169,30 @@ export default function ProjectsSection() {
                     ))}
                   </div>
 
-                  <div className="flex space-x-2">
-                    <Button 
-                      size="sm" 
-                      variant="outline" 
-                      className="flex-1 bg-transparent border-primary/20 hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-105" 
-                      asChild
-                    >
-                      <a href={project.demoUrl || '#'} target="_blank" rel="noopener noreferrer">
-                        <ExternalLink className="w-4 h-4 mr-2" />
-                        {t('projects.demo')}
-                      </a>
-                    </Button>
+                  <div className="flex gap-2 mt-4">
+                    {project.landingUrl ? (
+                      <Button 
+                        size="sm" 
+                        className="flex-1 bg-primary hover:bg-primary/90 text-primary-foreground transition-all duration-300 hover:scale-105" 
+                        asChild
+                      >
+                        <a href={project.landingUrl}>
+                          <ArrowRight className="w-4 h-4 mr-2" />
+                          {language === 'es' ? 'Ver Más' : 'Learn More'}
+                        </a>
+                      </Button>
+                    ) : (
+                      <Button 
+                        size="sm" 
+                        className="flex-1 bg-primary hover:bg-primary/90 text-primary-foreground transition-all duration-300 hover:scale-105" 
+                        asChild
+                      >
+                        <a href={project.demoUrl || '#'} target="_blank" rel="noopener noreferrer">
+                          <ExternalLink className="w-4 h-4 mr-2" />
+                          {t('projects.demo')}
+                        </a>
+                      </Button>
+                    )}
                     <Button 
                       size="sm" 
                       variant="outline" 
