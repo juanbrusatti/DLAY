@@ -14,7 +14,7 @@ export default function CustomCursor() {
       
       // Add to trail
       setTrail(prev => [
-        ...prev.slice(-5), // Keep only last 5 positions for better performance
+        ...prev.slice(-8), // Keep only last 8 positions
         { x: e.clientX, y: e.clientY, id: Date.now() }
       ])
     }
