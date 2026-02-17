@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useRef } from 'react'
 import { useLanguage } from '@/contexts/language-context'
+import ParallaxSection from '@/components/parallax-section'
 
 interface StatCounterProps {
   end: number
@@ -75,10 +76,14 @@ export default function StatsSection() {
 
   return (
     <section className="py-20 bg-muted/30 relative overflow-hidden">
-      {/* Background effects */}
+      {/* Background effects with Enhanced Parallax */}
       <div className="absolute inset-0">
-        <div className="absolute top-10 left-10 w-32 h-32 bg-primary/10 rounded-full blur-2xl animate-pulse"></div>
-        <div className="absolute bottom-10 right-10 w-40 h-40 bg-accent/10 rounded-full blur-2xl animate-pulse delay-1000"></div>
+        <ParallaxSection speed={0.8} direction="up" className="absolute top-10 left-10">
+          <div className="w-32 h-32 bg-primary/10 rounded-full blur-2xl animate-pulse"></div>
+        </ParallaxSection>
+        <ParallaxSection speed={1.0} direction="down" className="absolute bottom-10 right-10">
+          <div className="w-40 h-40 bg-accent/10 rounded-full blur-2xl animate-pulse delay-1000"></div>
+        </ParallaxSection>
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
