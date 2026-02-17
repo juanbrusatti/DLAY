@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge"
 import { ExternalLink, Github, Clock, CheckCircle, ArrowRight } from "lucide-react"
 import { useLanguage } from "@/contexts/language-context"
 import { useState, useEffect, useRef } from "react"
+import ParallaxSection from "@/components/parallax-section"
 
 const projects = {
   completed: [
@@ -90,10 +91,14 @@ export default function ProjectsSection() {
 
   return (
     <section ref={sectionRef} id="projects" className="py-20 bg-muted/30 relative overflow-hidden">
-      {/* Background decoration */}
+      {/* Background decoration with Enhanced Parallax */}
       <div className="absolute top-0 left-0 w-full h-full">
-        <div className="absolute top-10 left-10 w-32 h-32 bg-primary/10 rounded-full blur-2xl animate-pulse"></div>
-        <div className="absolute bottom-10 right-10 w-40 h-40 bg-accent/10 rounded-full blur-2xl animate-pulse delay-1000"></div>
+        <ParallaxSection speed={0.6} direction="up" className="absolute top-10 left-10">
+          <div className="w-32 h-32 bg-primary/10 rounded-full blur-2xl animate-pulse"></div>
+        </ParallaxSection>
+        <ParallaxSection speed={0.8} direction="down" className="absolute bottom-10 right-10">
+          <div className="w-40 h-40 bg-accent/10 rounded-full blur-2xl animate-pulse delay-1000"></div>
+        </ParallaxSection>
       </div>
       
       <div className="container mx-auto px-4 relative z-10">
