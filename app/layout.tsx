@@ -25,6 +25,11 @@ export const metadata: Metadata = {
   title: "DLAY - Programming Team",
   description: "We are a team of passionate programmers who transform ideas into software",
   generator: "v0.app",
+  icons: {
+    icon: '/icons/icon.png',
+    shortcut: '/icons/icon.png',
+    apple: '/icons/icon.png',
+  },
 }
 
 export default function RootLayout({
