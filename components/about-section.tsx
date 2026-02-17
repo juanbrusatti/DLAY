@@ -1,13 +1,14 @@
 "use client"
 
 import { Card, CardContent } from "@/components/ui/card"
-import { Heart, Lightbulb, Users, Target, Sparkles } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { Heart, Lightbulb, Users, Target, Sparkles, ArrowRight } from "lucide-react"
 import { useLanguage } from "@/contexts/language-context"
 import AnimatedStory from "./animated-story"
 import ScrollReveal from "./scroll-reveal"
 
 export default function AboutSection() {
-  const { t } = useLanguage()
+  const { t, language } = useLanguage()
 
   const values = [
     {
@@ -99,6 +100,23 @@ export default function AboutSection() {
                   </ScrollReveal>
                 ))}
               </div>
+            </div>
+          </ScrollReveal>
+          
+          {/* CTA Button */}
+          <ScrollReveal delay={1000} direction="up">
+            <div className="text-center mt-16">
+              <Button 
+                size="lg" 
+                className="bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-primary-foreground px-8 py-6 text-lg group"
+                onClick={() => window.location.href = '/about-dlay'}
+              >
+                {t('about.learnMore') || (language === 'es' ? 'Conocer Más a DLAY' : 'Learn More About DLAY')}
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+              </Button>
+              <p className="mt-4 text-muted-foreground text-sm">
+                {t('about.learnMoreSubtitle') || (language === 'es' ? 'Descubre nuestra historia, equipo y momentos divertidos' : 'Discover our story, team and fun moments')}
+              </p>
             </div>
           </ScrollReveal>
         </div>
