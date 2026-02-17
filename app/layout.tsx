@@ -23,10 +23,15 @@ const openSans = Open_Sans({
 })
 
 export const metadata: Metadata = {
-  title: {
-    default: "DLAY - Desarrollo de Software & Soluciones Digitales",
-    template: "%s | DLAY"
-  },
+
+  title: "DLAY - Programming Team",
+  description: "We are a team of passionate programmers who transform ideas into software",
+  generator: "v0.app",
+  icons: {
+    icon: '/icons/icon.png',
+    shortcut: '/icons/icon.png',
+    apple: '/icons/icon.png',
+      
   description: "DLAY - Equipo de desarrolladores de software especializados en crear soluciones digitales innovadoras. Transformamos ideas en realidad con tecnología de vanguardia.",
   keywords: [
     "DLAY",
