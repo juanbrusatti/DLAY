@@ -317,7 +317,7 @@ export default function AboutDLAYPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="font-montserrat font-bold text-3xl md:text-4xl text-foreground mb-4">
-              {language === 'es' ? 'Datos Divertidos' : 'Fun Facts'}
+              {language === 'es' ? 'Datos' : 'Fun Facts'}
             </h2>
             <p className="text-muted-foreground">
               {language === 'es' 
