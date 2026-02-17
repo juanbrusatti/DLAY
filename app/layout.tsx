@@ -23,15 +23,10 @@ const openSans = Open_Sans({
 })
 
 export const metadata: Metadata = {
-
-  title: "DLAY - Programming Team",
-  description: "We are a team of passionate programmers who transform ideas into software",
-  generator: "v0.app",
-  icons: {
-    icon: '/icons/icon.png',
-    shortcut: '/icons/icon.png',
-    apple: '/icons/icon.png',
-      
+  title: {
+    default: "DLAY - Desarrollo de Software & Soluciones Digitales",
+    template: "%s | DLAY"
+  },
   description: "DLAY - Equipo de desarrolladores de software especializados en crear soluciones digitales innovadoras. Transformamos ideas en realidad con tecnología de vanguardia.",
   keywords: [
     "DLAY",
@@ -51,11 +46,6 @@ export const metadata: Metadata = {
   authors: [{ name: "DLAY Team" }],
   creator: "DLAY",
   publisher: "DLAY",
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
   metadataBase: new URL('https://dlay.com'),
   alternates: {
     canonical: '/',
@@ -91,10 +81,6 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
-  },
-  verification: {
-    google: 'google-site-verification-code',
-    yandex: 'yandex-verification-code',
   },
 }
 
