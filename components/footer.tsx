@@ -2,9 +2,25 @@
 
 import { Github, Linkedin, Mail, Heart } from "lucide-react"
 import { useLanguage } from "@/contexts/language-context"
+import { getVisitCount } from "@/lib/register-visit"
+import { useEffect, useState } from "react"
+import { Users } from "lucide-react"
 
 export default function Footer() {
   const { t } = useLanguage()
+  const [visits, setVisits] = useState<number | null>(null)
+
+  useEffect(() => {
+    const fetchVisits = async () => {
+      try {
+        const count = await getVisitCount()
+        setVisits(count)
+      } catch (error) {
+        console.error('Error loading visits:', error)
+      }
+    }
+    fetchVisits()
+  }, [])
 
   return (
     <footer className="bg-card border-t border-border py-12">
@@ -126,6 +142,10 @@ export default function Footer() {
             {t('footer.madeWith')} <Heart className="w-4 h-4 text-red-500 mx-1" /> {t('footer.byTeam')}
           </p>
           <p className="font-open-sans text-xs text-muted-foreground mt-2">{t('footer.copyright')}</p>
+        </div>
+        <div className="mt-4 text-center text-xs text-muted-foreground flex items-center justify-center">
+          <Users className="w-4 h-4 text-primary mr-1" />
+          {visits !== null ? `${visits}` : 'Cargando visitas...'}
         </div>
       </div>
     </footer>

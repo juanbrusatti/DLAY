@@ -8,10 +8,12 @@ import Footer from "@/components/footer"
 import CustomCursor from "@/components/custom-cursor"
 import StatsSection from "@/components/stats-section"
 import PageTransition from "@/components/page-transition"
+import VisitTracker from "@/components/visit-tracker"
 
 export default function Home() {
   return (
       <main className="min-h-screen relative overflow-hidden">
+        <VisitTracker />
         <PageTransition />
         <CustomCursor />
         <div className="relative z-10">

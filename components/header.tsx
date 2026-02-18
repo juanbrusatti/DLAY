@@ -10,6 +10,7 @@ import ThemeToggle from "./theme-toggle"
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+  const [visits, setVisits] = useState<number | null>(null)
   const { t } = useLanguage()
 
 
@@ -36,12 +37,15 @@ export default function Header() {
         : 'bg-background/80 backdrop-blur-sm border-b border-border/50'
     }`}>
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-        {/* Logo */}
-        <div className="flex items-center space-x-2 group">
-          <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:rotate-6">
-            <span className="text-primary-foreground font-bold text-lg">=D</span>
+        {/* Visit Counter & Logo */}
+        <div className="flex items-center space-x-4">
+          {/* Logo */}
+          <div className="flex items-center space-x-2 group">
+            <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:rotate-6">
+              <span className="text-primary-foreground font-bold text-lg">=D</span>
+            </div>
+            <span className="font-montserrat font-black text-xl text-foreground transition-all duration-300 group-hover:text-primary">DLAY</span>
           </div>
-          <span className="font-montserrat font-black text-xl text-foreground transition-all duration-300 group-hover:text-primary">DLAY</span>
         </div>
 
         {/* Desktop Navigation */}
