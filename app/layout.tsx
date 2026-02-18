@@ -29,9 +29,9 @@ export const metadata: Metadata = {
   },
   description: "DLAY - Equipo de programadores y desarrolladores de software en Río Cuarto. Especializados en desarrollo de aplicaciones web, móviles y soluciones digitales a medida. Transformamos ideas en realidad con tecnología de vanguardia.",
   icons: {
-    icon: '/icons/favicon.png',
-    shortcut: '/icons/favicon.png',
-    apple: '/icons/favicon.png',
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/icons/icon.png',
   },
   keywords: [
     "DLAY",
