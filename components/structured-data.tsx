@@ -3,10 +3,10 @@ export default function StructuredData() {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "DLAY",
-    "alternateName": ["DLAY Software Development", "DLAY Programadores Río Cuarto"],
+    "alternateName": "DLAY Software Development",
     "url": "https://dlay.com",
     "logo": "https://dlay.com/logo.png",
-    "description": "Equipo de programadores y desarrolladores de software en Río Cuarto, Córdoba. Especializados en desarrollo de aplicaciones web, móviles y soluciones digitales a medida para empresas y emprendimientos.",
+    "description": "Equipo de desarrolladores de software especializados en crear soluciones digitales innovadoras. Transformamos ideas en realidad con tecnología de vanguardia.",
     "founder": {
       "@type": "Organization",
       "name": "DLAY Team"
@@ -14,29 +14,29 @@ export default function StructuredData() {
     "foundingDate": "2024-01-15",
     "areaServed": [
       {
-        "@type": "City",
-        "name": "Río Cuarto"
+        "@type": "Country",
+        "name": "Argentina"
       },
       {
-        "@type": "AdministrativeArea", 
-        "name": "Córdoba"
+        "@type": "Country", 
+        "name": "United States"
       },
       {
         "@type": "Country",
-        "name": "Argentina"
+        "name": "Spain"
       }
     ],
-    "serviceType": ["Software Development", "Web Development", "Mobile App Development", "Programming Services"],
+    "serviceType": "Software Development",
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
-      "name": "Servicios de Programación y Desarrollo de Software",
+      "name": "Servicios de Desarrollo de Software",
       "itemListElement": [
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
             "name": "Desarrollo Web",
-            "description": "Creación de sitios web modernos y responsivos con las últimas tecnologías"
+            "description": "Creación de sitios web modernos y responsivos"
           }
         },
         {
@@ -44,23 +44,15 @@ export default function StructuredData() {
           "itemOffered": {
             "@type": "Service",
             "name": "Aplicaciones Móviles",
-            "description": "Desarrollo de aplicaciones móviles nativas e híbridas para iOS y Android"
+            "description": "Desarrollo de aplicaciones móviles nativas e híbridas"
           }
         },
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service", 
-            "name": "Consultoría de Software",
-            "description": "Asesoramiento y desarrollo de soluciones digitales a medida"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Programación a Medida",
-            "description": "Desarrollo de software personalizado según las necesidades del cliente"
+            "name": "Soluciones Digitales",
+            "description": "Consultoría y desarrollo de soluciones a medida"
           }
         }
       ]
