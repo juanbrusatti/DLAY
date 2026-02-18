@@ -29,8 +29,8 @@ export const metadata: Metadata = {
   },
   description: "DLAY - Equipo de desarrolladores de software especializados en crear soluciones digitales innovadoras. Transformamos ideas en realidad con tecnología de vanguardia.",
   icons: {
-    icon: '/icons/icon.png',
-    shortcut: '/icons/icon.png',
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
     apple: '/icons/icon.png',
   },
   keywords: [

@@ -27,7 +27,7 @@ export default function AboutDLAYPage() {
   const teamMembers = [
     {
       name: "DLAY Team",
-      role: language === 'es' ? "Desarrolladores Apasionados" : "Passionate Developers",
+      role: language === 'es' ? "Desarrolladores apasionados" : "Passionate developers",
       emoji: "👨‍💻",
       description: language === 'es' 
         ? "Grupo de estudiantes de ciencias de la computación con visión innovadora" 
@@ -35,7 +35,7 @@ export default function AboutDLAYPage() {
     },
     {
       name: "The Innovators",
-      role: language === 'es' ? "Soluciones Creativas" : "Creative Solutions",
+      role: language === 'es' ? "Soluciones creativas" : "Creative solutions",
       emoji: "🚀",
       description: language === 'es'
         ? "Transformando ideas en realidad digital"
@@ -53,7 +53,7 @@ export default function AboutDLAYPage() {
 
   const officeMoments = [
     {
-      title: language === 'es' ? "Brainstorming Intenso" : "Intense Brainstorming",
+      title: language === 'es' ? "Brainstorming intenso" : "Intense brainstorming",
       description: language === 'es' 
         ? "Donde nacen las mejores ideas" 
         : "Where the best ideas are born",
@@ -61,7 +61,7 @@ export default function AboutDLAYPage() {
       color: "from-yellow-400 to-orange-500"
     },
     {
-      title: language === 'es' ? "Sesiones de Código" : "Coding Sessions",
+      title: language === 'es' ? "Sesiones de código" : "Coding sessions",
       description: language === 'es'
         ? "Transformando café/mate en código funcional"
         : "Turning coffee/mate into functional code",
@@ -77,7 +77,7 @@ export default function AboutDLAYPage() {
       color: "from-green-400 to-teal-500"
     },
     {
-      title: language === 'es' ? "Breaks Necesarios" : "Necessary Breaks",
+      title: language === 'es' ? "Breaks necesarios" : "Necessary breaks",
       description: language === 'es'
         ? "Recargando energías para seguir creando"
         : "Recharging energy to keep creating",
@@ -95,13 +95,13 @@ export default function AboutDLAYPage() {
     },
     {
       icon: <Code className="w-6 h-6" />,
-      title: language === 'es' ? "Líneas de Código" : "Lines of Code",
+      title: language === 'es' ? "Líneas de código" : "Lines of code",
       value: "50K+",
       description: language === 'es' ? "Y contando" : "And counting"
     },
     {
       icon: <Users className="w-6 h-6" />,
-      title: language === 'es' ? "Clientes Felices" : "Happy Clients",
+      title: language === 'es' ? "Clientes celices" : "Happy clients",
       value: "100%",
       description: language === 'es' ? "Nuestra mejor métrica" : "Our best metric"
     },
@@ -162,7 +162,7 @@ export default function AboutDLAYPage() {
             
             <h1 className="font-montserrat font-black text-4xl md:text-6xl lg:text-7xl text-foreground mb-6">
               <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                {language === 'es' ? 'Conocer Más a DLAY' : 'Get to Know DLAY'}
+                {language === 'es' ? 'Conocer más a DLAY' : 'Get to know DLAY'}
               </span>
             </h1>
             
@@ -181,7 +181,7 @@ export default function AboutDLAYPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="font-montserrat font-bold text-3xl md:text-4xl text-foreground mb-4">
-              {language === 'es' ? 'Nuestro Primer Commit' : 'Our First Commit'}
+              {language === 'es' ? 'Nuestro primer commit' : 'Our first commit'}
             </h2>
             <p className="text-muted-foreground">
               {language === 'es' 

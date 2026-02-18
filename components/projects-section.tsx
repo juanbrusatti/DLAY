@@ -7,65 +7,7 @@ import { ExternalLink, Github, Clock, CheckCircle, ArrowRight } from "lucide-rea
 import { useLanguage } from "@/contexts/language-context"
 import { useState, useEffect, useRef } from "react"
 import ParallaxSection from "@/components/parallax-section"
-
-const projects = {
-  completed: [
-    {
-      id: "acma-ar-aberturas",
-      name: "Acma AR Aberturas",
-      client: "AR Aberturas",
-      clientUrl: "https://araberturas.com",
-      description: "ACMA es un software avanzado para la industria del vidrio que permite generar presupuestos precisos, gestionar stock de planchas y sobrantes, e integrar un algoritmo de optimización de cortes, reduciendo costos de producción y maximizando la eficiencia operativa de cada proyecto.",
-      descriptionEn: "ACMA is an advanced software for glass industry that enables precise budget generation, manages sheet and scrap inventory, and integrates a cutting optimization algorithm, reducing production costs and maximizing operational efficiency for each project.",
-      image: "/captura-acma.png",
-      technologies: ["Python", "Ruby", "JavaScript", "Tailwind CSS", "PostgreSQL"],
-      landingUrl: "/acma-ar-aberturas",
-      githubUrl: "https://github.com/juanbrusatti/acma",
-    },
-    {
-      id: "aberturito",
-      name: "Aberturito",
-      client: "AR Aberturas",
-      clientUrl: "#",
-      description: "Sistema integral de gestión interna para AR Aberturas que conecta todos los departamentos (administración, fábrica, colocadores, ventas y marketing) en una sola plataforma. Facilita la comunicación, el seguimiento de órdenes y la gestión de proyectos, mejorando la eficiencia operativa y la colaboración entre equipos.",
-      descriptionEn: "Comprehensive internal management system for AR Aberturas that connects all departments (administration, factory, installers, sales, and marketing) in a single platform. Streamlines communication, order tracking, and project management, enhancing operational efficiency and team collaboration.",
-      image: "/Aberturito.png",
-      technologies: ["Next.js", "Tailwind CSS", "Vercel", "Firebase", "SQL"],
-      landingUrl: "/aberturito",
-      demoUrl: "https://v0-responsive-web-demo-5o9ovubli.vercel.app",
-      githubUrl: "https://github.com/CornejoMateo/Aberturito",
-    },
-    {
-      id: "ecotrack",
-      name: "Roswell Indumentaria",
-      client: "roswell.com.ar",
-      clientUrl: "https://roswell.com.ar",
-      description:
-        "Sitio de catálogo de indumentaria masculina con carrito que envía pedidos por WhatsApp con mensajes predefinidos según los productos seleccionados.",
-      descriptionEn:
-        "Menswear catalog website with a cart that sends orders via WhatsApp using predefined messages based on selected items.",
-      image: "/roswell.png",
-      technologies: ["Supabase", "Tailwind CSS", "Next.js"],
-      landingUrl: "/roswell",
-      demoUrl: "https://roswell.com.ar",
-      githubUrl: "https://github.com/juanbrusatti/roswell",
-    },
-  ],
-  inProgress: [
-    {
-      id: "applert",
-      name: "Applert",
-      client: "Vlan",
-      description: "APPLERT es una aplicación móvil de seguridad ciudadana que permite enviar alertas de emergencia con un solo toque a entidades de respuesta rápida como policía, bomberos y servicios médicos. La plataforma transmite la ubicación en tiempo real del usuario y mantiene un canal de comunicación directo con las autoridades, además de incluir una sección de noticias donde las entidades publican información relevante sobre eventos y situaciones en la ciudad.",
-      descriptionEn: "APPLERT is a citizen security mobile application that allows sending emergency alerts with a single touch to rapid response entities such as police, firefighters, and medical services. The platform transmits user's real-time location and maintains direct communication with authorities, plus includes a news section where entities publish relevant information about events and situations in the city.",
-      image: "/e-learning-platform-with-course-interface.jpg",
-      technologies: ["React Native", "JavaScript", "Tailwind CSS", "Firebase"],
-      landingUrl: "/applert",
-      demoUrl: "#",
-      githubUrl: "https://github.com/juanbrusatti/municipalidad-app",
-    },
-  ],
-}
+import { projectsData } from "@/lib/projects-data"
 
 export default function ProjectsSection() {
   const { t, language } = useLanguage()
@@ -126,7 +68,7 @@ export default function ProjectsSection() {
             <h3 className="font-montserrat font-bold text-2xl text-foreground">{t('projects.completed')}</h3>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.completed.map((project, index) => (
+            {projectsData.completed.map((project, index) => (
               <Card 
                 key={index} 
                 className="group hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 border-0 bg-card/50 backdrop-blur-sm overflow-hidden"
@@ -179,7 +121,7 @@ export default function ProjectsSection() {
                       >
                         <a href={project.landingUrl}>
                           <ArrowRight className="w-4 h-4 mr-2" />
-                          {language === 'es' ? 'Ver Más' : 'Learn More'}
+                          {language === 'es' ? 'Ver más' : 'Learn more'}
                         </a>
                       </Button>
                     ) : (
@@ -223,7 +165,7 @@ export default function ProjectsSection() {
             <h3 className="font-montserrat font-bold text-2xl text-foreground">{t('projects.inProgress')}</h3>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {projects.inProgress.map((project, index) => (
+            {projectsData.inProgress.map((project, index) => (
               <Card 
                 key={index} 
                 className="group hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 border-0 bg-card/50 backdrop-blur-sm overflow-hidden"

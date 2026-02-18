@@ -39,7 +39,7 @@ const teamMembers = [
     social: {
       github: "https://github.com/CornejoMateo",
       linkedin: "#",
-      email: "mateo@dlay.dev",
+      email: "cornejomateoandres@gmail.com",
     },
   },
   {

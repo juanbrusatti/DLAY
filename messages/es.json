@@ -18,7 +18,7 @@
     "whatDrivesUs": "Lo Que Nos Impulsa",
     "values": {
       "trust": {
-        "title": "Confianza y Compromiso",
+        "title": "Confianza y compromiso",
         "description": "Construimos relaciones duraderas con nuestros clientes a través de la transparencia, confiabilidad y dedicación inquebrantable a su éxito."
       },
       "innovation": {
@@ -30,15 +30,15 @@
         "description": "Creemos en el poder del trabajo en equipo, tanto dentro de nuestro equipo como con nuestros clientes, para crear resultados excepcionales."
       },
       "practical": {
-        "title": "Soluciones Prácticas",
+        "title": "Soluciones prácticas",
         "description": "Nos enfocamos en entregar soluciones prácticas y escalables que proporcionen valor real e impulsen resultados comerciales significativos."
       }
     },
-    "learnMore": "Conocer Más a DLAY",
+    "learnMore": "Conocer más a DLAY",
     "learnMoreSubtitle": "Descubre nuestra historia, equipo y momentos divertidos"
   },
   "team": {
-    "title": "Conoce Nuestro Equipo",
+    "title": "Conoce nuestro equipo",
     "subtitle": "Los desarrolladores apasionados detrás de DLAY",
     "members": {
       "juan": {
@@ -81,15 +81,56 @@
       },
       "acma-ar-aberturas": {
         "name": "Acma AR Aberturas",
-        "description": "Un sistema de gestión de inventario impulsado por IA que predice las necesidades de stock y automatiza la reordenación para empresas minoristas.",
-        "client": "RetailTech Corp"
+        "client": "AR Aberturas",
+        "clientUrl": "https://araberturas.com",
+        "description": "ACMA es un software avanzado para la industria del vidrio que permite generar presupuestos precisos, gestionar stock de planchas y sobrantes, e integrar un algoritmo de optimización de cortes, reduciendo costos de producción y maximizando la eficiencia operativa de cada proyecto.",
+        "descriptionEn": "ACMA is an advanced software for glass industry that enables precise budget generation, manages sheet and scrap inventory, and integrates a cutting optimization algorithm, reducing production costs and maximizing operational efficiency for each project.",
+        "image": "/captura-acma.png",
+        "technologies": ["Python", "Ruby", "JavaScript", "Tailwind CSS", "PostgreSQL"],
+        "landingUrl": "/acma-ar-aberturas",
+        "githubUrl": "https://github.com/juanbrusatti/acma"
       },
-      "applert": {
-        "name": "Applert",
-        "description": "Una plataforma de e-learning interactiva con rutas de aprendizaje personalizadas y seguimiento de progreso para instituciones educativas.",
-        "client": "EduTech Academy"
+      {
+        "id": "aberturito",
+        "name": "Aberturito",
+        "client": "AR Aberturas",
+        "clientUrl": "#",
+        "description": "Sistema integral de gestión interna para AR Aberturas que conecta todos los departamentos (administración, fábrica, colocadores, ventas y marketing) en una sola plataforma. Facilita la comunicación, el seguimiento de órdenes y la gestión de proyectos, mejorando la eficiencia operativa y la colaboración entre equipos.",
+        "descriptionEn": "Comprehensive internal management system for AR Aberturas that connects all departments (administration, factory, installers, sales, and marketing) in a single platform. Streamlines communication, order tracking, and project management, enhancing operational efficiency and team collaboration.",
+        "image": "/Aberturito.png",
+        "technologies": ["Next.js", "Tailwind CSS", "Vercel", "Firebase", "SQL"],
+        "landingUrl": "/aberturito",
+        "demoUrl": "https://v0-responsive-web-demo-5o9ovubli.vercel.app",
+        "githubUrl": "https://github.com/CornejoMateo/Aberturito"
+      },
+      {
+        "id": "ecotrack",
+        "name": "Roswell Indumentaria",
+        "client": "roswell.com.ar",
+        "clientUrl": "https://roswell.com.ar",
+        "description": "Sitio de catálogo de indumentaria masculina con carrito que envía pedidos por WhatsApp con mensajes predefinidos según los productos seleccionados.",
+        "descriptionEn": "Menswear catalog website with a cart that sends orders via WhatsApp using predefined messages based on selected items.",
+        "image": "/roswell.png",
+        "technologies": ["Supabase", "Tailwind CSS", "Next.js"],
+        "landingUrl": "/roswell",
+        "demoUrl": "https://roswell.com.ar",
+        "githubUrl": "https://github.com/juanbrusatti/roswell"
       }
-    }
+    ],
+    "inProgress": [
+      {
+        "id": "applert",
+        "name": "Applert",
+        "client": "Vlan",
+        "description": "APPLERT es una aplicación móvil de seguridad ciudadana que permite enviar alertas de emergencia con un solo toque a entidades de respuesta rápida como policía, bomberos y servicios médicos. La plataforma transmite la ubicación en tiempo real del usuario y mantiene un canal de comunicación directo con las autoridades, además de incluir una sección de noticias donde las entidades publican información relevante sobre eventos y situaciones en la ciudad.",
+        "descriptionEn": "APPLERT is a citizen security mobile application that allows sending emergency alerts with a single touch to rapid response entities such as police, firefighters, and medical services. The platform transmits user's real-time location and maintains direct communication with authorities, plus includes a news section where entities publish relevant information about events and situations in the city.",
+        "image": "/e-learning-platform-with-course-interface.jpg",
+        "technologies": ["React Native", "JavaScript", "Tailwind CSS", "Firebase"],
+        "landingUrl": "/applert",
+        "demoUrl": "#",
+        "githubUrl": "https://github.com/juanbrusatti/municipalidad-app"
+      }
+    ]
   },
   "contact": {
     "title": "Contacta a Nuestros Programadores",
