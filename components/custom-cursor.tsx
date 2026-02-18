@@ -94,24 +94,10 @@ export default function CustomCursor() {
           transform: 'translate(-50%, -50%)',
         }}
       >
-        {/* Outer ring */}
-        <div
-          className={`absolute inset-0 border-2 border-primary rounded-full transition-all duration-300 ${
-            isHovering ? 'w-8 h-8 opacity-50' : 'w-6 h-6 opacity-80'
-          }`}
-        />
-        
-        {/* Inner dot */}
+        {/* Green dot only */}
         <div
           className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-primary rounded-full transition-all duration-300 ${
             isHovering ? 'w-2 h-2' : 'w-1 h-1'
-          }`}
-        />
-        
-        {/* Glow effect */}
-        <div
-          className={`absolute inset-0 bg-primary rounded-full blur-md transition-all duration-300 ${
-            isHovering ? 'opacity-30 w-8 h-8' : 'opacity-20 w-6 h-6'
           }`}
         />
       </div>

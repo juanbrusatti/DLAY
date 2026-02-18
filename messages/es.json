@@ -4,18 +4,18 @@
     "description": "Somos un equipo de programadores apasionados que transformamos ideas en software"
   },
   "hero": {
-    "title": "Somos equipo de programadores apasionados que transformamos ideas en software",
-    "subtitle": "Desde el concepto hasta el despliegue, damos vida a tu visión digital con tecnología de vanguardia y soluciones innovadoras.",
-    "startProject": "Iniciar tu proyecto",
-    "viewWork": "Ver nuestro trabajo"
+    "title": "Programadores y Desarrolladores de Software en Río Cuarto",
+    "subtitle": "Somos un equipo de programadores especializados en desarrollo de software, aplicaciones web y móviles. Transformamos ideas en soluciones digitales innovadoras para empresas en Río Cuarto y todo Argentina.",
+    "startProject": "Iniciar Tu Proyecto",
+    "viewWork": "Ver Nuestro Trabajo"
   },
   "about": {
-    "title": "Acerca de DLAY",
-    "ourStory": "Nuestra historia",
-    "storyText1": "DLAY fue fundado por un grupo de estudiantes apasionados de ciencias de la computación que compartían una visión común: cerrar la brecha entre ideas innovadoras y soluciones de software prácticas.",
-    "storyText2": "Lo que comenzó como sesiones de programación nocturnas en nuestro laboratorio universitario ha evolucionado hacia un equipo dedicado comprometido con transformar cómo las empresas abordan la tecnología.",
-    "storyText3": "Creemos que el gran software no se trata solo de código limpio—se trata de entender las necesidades de nuestros clientes y entregar soluciones que marquen una diferencia real.",
-    "whatDrivesUs": "Lo que nos impulsa",
+    "title": "Desarrollo de Software y Servicios de Programación",
+    "ourStory": "Nuestra Historia como Desarrolladores",
+    "storyText1": "DLAY es una empresa de software especializada en desarrollo de aplicaciones web, móviles y soluciones digitales a medida. Nuestro equipo de programadores en Río Cuarto ofrece servicios de consultoría y desarrollo para empresas de todos los tamaños.",
+    "storyText2": "Como programadores profesionales, combinamos experiencia en desarrollo frontend, backend y mobile apps para crear soluciones integrales. Nos especializamos en transformar ideas de negocio en software funcional y escalable.",
+    "storyText3": "Nuestros servicios de programación incluyen desarrollo web a medida, aplicaciones móviles, consultoría de software y mantenimiento de sistemas. Trabajamos con las últimas tecnologías para garantizar resultados óptimos.",
+    "whatDrivesUs": "Lo Que Nos Impulsa",
     "values": {
       "trust": {
         "title": "Confianza y compromiso",
@@ -56,9 +56,30 @@
     }
   },
   "projects": {
-    "completed": [
-      {
-        "id": "acma-ar-aberturas",
+    "title": "Proyectos de Desarrollo de Software",
+    "subtitle": "Conoce nuestro trabajo como programadores y desarrolladores de software en Río Cuarto",
+    "completed": "Proyectos Completados",
+    "inProgress": "En Progreso",
+    "demo": "Demo",
+    "code": "Código",
+    "expected": "Finalización Esperada",
+    "items": {
+      "ecotrack": {
+        "name": "EcoTrack",
+        "description": "Una aplicación de seguimiento de sostenibilidad que ayuda a las empresas a monitorear y reducir su huella de carbono a través de visualización de datos e insights accionables.",
+        "client": "GreenTech Solutions"
+      },
+      "taskflow": {
+        "name": "TaskFlow",
+        "description": "Una plataforma de gestión de proyectos colaborativa diseñada para equipos remotos, con actualizaciones en tiempo real y herramientas de comunicación integradas.",
+        "client": "RemoteWork Inc."
+      },
+      "mediconnect": {
+        "name": "MediConnect",
+        "description": "Una plataforma de telemedicina que conecta pacientes con proveedores de atención médica, con videollamadas seguras y programación de citas.",
+        "client": "HealthTech Innovations"
+      },
+      "acma-ar-aberturas": {
         "name": "Acma AR Aberturas",
         "client": "AR Aberturas",
         "clientUrl": "https://araberturas.com",
@@ -112,8 +133,8 @@
     ]
   },
   "contact": {
-    "title": "Ponte en Contacto",
-    "subtitle": "¿Listo para comenzar tu próximo proyecto? ¡Hablemos!",
+    "title": "Contacta a Nuestros Programadores",
+    "subtitle": "¿Necesitas desarrollo de software en Río Cuarto? ¡Hablemos de tu proyecto!",
     "name": "Nombre",
     "email": "Correo Electrónico",
     "message": "Mensaje",
