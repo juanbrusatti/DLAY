@@ -122,10 +122,10 @@ export default function ContactSection() {
                         {t('contact.emailDescription')}
                       </p>
                       <a
-                        href="mailto:dlay.contac@gmail.com"
+                        href="mailto:dlay.software.contact@gmail.com"
                         className="font-open-sans text-primary hover:text-primary/80 transition-colors font-semibold"
                       >
-                        dlay.contact@gmail.com
+                        dlay.software.contact@gmail.com
                       </a>
                     </div>
                   </div>
@@ -149,36 +149,13 @@ export default function ContactSection() {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        +1 (234) 567-8900
+                        +54 9 3584178955
                       </a>
                     </div>
                   </div>
                 </CardContent>
               </Card>
 
-              <Card className="shadow-lg">
-                <CardContent className="p-6">
-                  <div className="flex items-start space-x-4">
-                    <div className="flex-shrink-0">
-                      <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                        <Linkedin className="w-6 h-6 text-primary" />
-                      </div>
-                    </div>
-                    <div>
-                      <h3 className="font-montserrat font-bold text-lg text-foreground mb-2">{t('contact.linkedin')}</h3>
-                      <p className="font-open-sans text-muted-foreground mb-2">{t('contact.linkedinDescription')}</p>
-                      <a
-                        href="https://linkedin.com/company/dlay-dev"
-                        className="font-open-sans text-primary hover:text-primary/80 transition-colors font-semibold"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        /company/dlay-dev
-                      </a>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
             </div>
           </div>
         </div>
