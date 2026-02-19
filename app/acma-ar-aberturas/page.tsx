@@ -22,28 +22,28 @@ export default function AcmaLanding() {
   const benefits = [
     {
       icon: TrendingUp,
-      title: language === 'es' ? 'Optimización de Costos' : 'Cost Optimization',
+      title: language === 'es' ? 'Optimización de costos' : 'Cost optimization',
       description: language === 'es' 
         ? 'Reduce los costos de producción hasta en un 40% con nuestro algoritmo inteligente de corte de planchas.'
         : 'Reduce production costs by up to 40% with our intelligent sheet cutting algorithm.'
     },
     {
       icon: BarChart3,
-      title: language === 'es' ? 'Gestión Precisa' : 'Precise Management',
+      title: language === 'es' ? 'Gestión precisa' : 'Precise management',
       description: language === 'es'
         ? 'Control total del inventario de planchas y sobrantes con actualización en tiempo real.'
         : 'Complete control of sheet and scrap inventory with real-time updates.'
     },
     {
       icon: Users,
-      title: language === 'es' ? 'Colaboración Mejorada' : 'Enhanced Collaboration',
+      title: language === 'es' ? 'Colaboración mejorada' : 'Enhanced collaboration',
       description: language === 'es'
         ? 'Facilita la comunicación entre equipos de producción y administración.'
         : 'Facilitates communication between production and administration teams.'
     },
     {
       icon: Shield,
-      title: language === 'es' ? 'Presupuestos Exactos' : 'Accurate Budgets',
+      title: language === 'es' ? 'Presupuestos exactos' : 'Accurate budgets',
       description: language === 'es'
         ? 'Generación de presupuestos precisos que eliminan errores humanos y mejoran la rentabilidad.'
         : 'Generate accurate budgets that eliminate human errors and improve profitability.'
@@ -52,25 +52,25 @@ export default function AcmaLanding() {
 
   const features = [
     {
-      title: language === 'es' ? 'Algoritmo de Optimización' : 'Optimization Algorithm',
+      title: language === 'es' ? 'Algoritmo de optimización' : 'Optimization algorithm',
       description: language === 'es'
         ? 'Tecnología patentada que calcula el mejor aprovechamiento de cada plancha de vidrio.'
         : 'Patented technology that calculates the best use of each glass sheet.'
     },
     {
-      title: language === 'es' ? 'Gestión de Stock' : 'Inventory Management',
+      title: language === 'es' ? 'Gestión de stock' : 'Inventory management',
       description: language === 'es'
         ? 'Control automatizado de inventario con alertas de stock mínimo y máximo.'
         : 'Automated inventory control with minimum and maximum stock alerts.'
     },
     {
-      title: language === 'es' ? 'Integración ERP' : 'ERP Integration',
+      title: language === 'es' ? 'Integración ERP' : 'ERP integration',
       description: language === 'es'
         ? 'Se integra con los principales sistemas ERP del mercado.'
         : 'Integrates with leading ERP systems in the market.'
     },
     {
-      title: language === 'es' ? 'Reportes Avanzados' : 'Advanced Reports',
+      title: language === 'es' ? 'Reportes avanzados' : 'Advanced reports',
       description: language === 'es'
         ? 'Análisis detallado de rendimiento y métricas de producción en tiempo real.'
         : 'Detailed performance analysis and real-time production metrics.'

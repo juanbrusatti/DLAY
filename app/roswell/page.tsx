@@ -22,28 +22,28 @@ export default function RoswellLanding() {
   const benefits = [
     {
       icon: ShoppingBag,
-      title: language === 'es' ? 'Catálogo Digital' : 'Digital Catalog',
+      title: language === 'es' ? 'Catálogo digital' : 'Digital catalog',
       description: language === 'es' 
         ? 'Muestra toda la colección de indumentaria masculina con imágenes de alta calidad.'
         : 'Displays the entire menswear collection with high-quality images.'
     },
     {
       icon: MessageSquare,
-      title: language === 'es' ? 'Pedidos por WhatsApp' : 'WhatsApp Orders',
+      title: language === 'es' ? 'Pedidos por WhatsApp' : 'WhatsApp orders',
       description: language === 'es'
         ? 'Sistema innovador que envía pedidos automáticamente con mensajes predefinidos.'
         : 'Innovative system that automatically sends orders with predefined messages.'
     },
     {
       icon: Smartphone,
-      title: language === 'es' ? 'Experiencia Móvil' : 'Mobile Experience',
+      title: language === 'es' ? 'Experiencia móvil' : 'Mobile experience',
       description: language === 'es'
         ? 'Diseño totalmente responsive para una experiencia perfecta en cualquier dispositivo.'
         : 'Fully responsive design for a perfect experience on any device.'
     },
     {
       icon: TrendingUp,
-      title: language === 'es' ? 'Conversión Mejorada' : 'Enhanced Conversion',
+      title: language === 'es' ? 'Conversión mejorada' : 'Enhanced conversion',
       description: language === 'es'
         ? 'Proceso de compra simplificado que aumenta las tasas de conversión.'
         : 'Simplified purchase process that increases conversion rates.'
@@ -52,37 +52,37 @@ export default function RoswellLanding() {
 
   const features = [
     {
-      title: language === 'es' ? 'Galería de Productos' : 'Product Gallery',
+      title: language === 'es' ? 'Galería de productos' : 'Product gallery',
       description: language === 'es'
         ? 'Visualización detallada de cada prenda con múltiples ángulos y zoom.'
         : 'Detailed visualization of each garment with multiple angles and zoom.'
     },
     {
-      title: language === 'es' ? 'Carrito Inteligente' : 'Smart Cart',
+      title: language === 'es' ? 'Carrito inteligente' : 'Smart cart',
       description: language === 'es'
         ? 'Carrito de compras persistente que recuerda los productos seleccionados.'
         : 'Persistent shopping cart that remembers selected products.'
     },
     {
-      title: language === 'es' ? 'Integración WhatsApp' : 'WhatsApp Integration',
+      title: language === 'es' ? 'Integración WhatsApp' : 'WhatsApp integration',
       description: language === 'es'
         ? 'Conexión directa con WhatsApp para comunicación instantánea con clientes.'
         : 'Direct connection with WhatsApp for instant customer communication.'
     },
     {
-      title: language === 'es' ? 'Gestión de Inventario' : 'Inventory Management',
+      title: language === 'es' ? 'Gestión de inventario' : 'Inventory management',
       description: language === 'es'
         ? 'Control automático de stock con actualización en tiempo real.'
         : 'Automatic stock control with real-time updates.'
     },
     {
-      title: language === 'es' ? 'Mensajes Personalizados' : 'Custom Messages',
+      title: language === 'es' ? 'Mensajes personalizados' : 'Custom messages',
       description: language === 'es'
         ? 'Mensajes automáticos según los productos seleccionados en el carrito.'
         : 'Automatic messages based on products selected in the cart.'
     },
     {
-      title: language === 'es' ? 'Interfaz Intuitiva' : 'Intuitive Interface',
+      title: language === 'es' ? 'Interfaz intuitiva' : 'Intuitive interface',
       description: language === 'es'
         ? 'Diseño limpio y moderno que facilita la navegación y compra.'
         : 'Clean and modern design that facilitates navigation and purchasing.'

@@ -51,7 +51,7 @@ export default function ServiciosPage() {
             </div>
 
             <div className="bg-background/50 backdrop-blur-sm border border-primary/20 rounded-lg p-8">
-              <h2 className="font-semibold text-2xl mb-4">Aplicaciones Móviles</h2>
+              <h2 className="font-semibold text-2xl mb-4">Aplicaciones moviles</h2>
               <p className="text-muted-foreground mb-4">
                 Desarrollo de aplicaciones móviles nativas e híbridas para iOS y Android.
               </p>

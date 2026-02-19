@@ -22,28 +22,28 @@ export default function ApplertLanding() {
   const benefits = [
     {
       icon: Shield,
-      title: language === 'es' ? 'Seguridad Inmediata' : 'Instant Security',
+      title: language === 'es' ? 'Seguridad inmediata' : 'Instant security',
       description: language === 'es' 
         ? 'Envía alertas de emergencia con un solo toque a las autoridades correspondientes.'
         : 'Sends emergency alerts with a single touch to corresponding authorities.'
     },
     {
       icon: MapPin,
-      title: language === 'es' ? 'Ubicación en Tiempo Real' : 'Real-time Location',
+      title: language === 'es' ? 'Ubicación en tiempo real' : 'Real-time location',
       description: language === 'es'
         ? 'Transmite la ubicación exacta del usuario para respuestas rápidas.'
         : 'Transmits the user\'s exact location for quick responses.'
     },
     {
       icon: Users,
-      title: language === 'es' ? 'Conexión Directa' : 'Direct Connection',
+      title: language === 'es' ? 'Conexión directa' : 'Direct connection',
       description: language === 'es'
         ? 'Mantiene comunicación constante con servicios de emergencia.'
         : 'Maintains constant communication with emergency services.'
     },
     {
       icon: MessageSquare,
-      title: language === 'es' ? 'Canal de Comunicación' : 'Communication Channel',
+      title: language === 'es' ? 'Canal de comunicación' : 'Communication channel',
       description: language === 'es'
         ? 'Chat directo con las entidades para coordinar respuestas efectivas.'
         : 'Direct chat with entities to coordinate effective responses.'
@@ -52,37 +52,37 @@ export default function ApplertLanding() {
 
   const features = [
     {
-      title: language === 'es' ? 'Alertas Inteligentes' : 'Smart Alerts',
+      title: language === 'es' ? 'Alertas inteligentes' : 'Smart alerts',
       description: language === 'es'
         ? 'Sistema clasificado de alertas según el tipo y nivel de emergencia.'
         : 'Classified alert system based on type and emergency level.'
     },
     {
-      title: language === 'es' ? 'Panel de Noticias' : 'News Panel',
+      title: language === 'es' ? 'Panel de noticias' : 'News panel',
       description: language === 'es'
         ? 'Las entidades publican información relevante sobre eventos en la ciudad.'
         : 'Entities publish relevant information about city events.'
     },
     {
-      title: language === 'es' ? 'Interfaz Intuitiva' : 'Intuitive Interface',
+      title: language === 'es' ? 'Interfaz intuitiva' : 'Intuitive interface',
       description: language === 'es'
         ? 'Diseño simple y accesible para uso rápido en situaciones de emergencia.'
         : 'Simple and accessible design for quick use in emergency situations.'
     },
     {
-      title: language === 'es' ? 'Notificaciones Push' : 'Push Notifications',
+      title: language === 'es' ? 'Notificaciones push' : 'Push notifications',
       description: language === 'es'
         ? 'Alertas instantáneas a todos los usuarios registrados en el área.'
         : 'Instant alerts to all registered users in the area.'
     },
     {
-      title: language === 'es' ? 'Historial de Alertas' : 'Alert History',
+      title: language === 'es' ? 'Historial de alertas' : 'Alert history',
       description: language === 'es'
         ? 'Registro completo de todas las alertas enviadas y respuestas recibidas.'
         : 'Complete record of all sent alerts and received responses.'
     },
     {
-      title: language === 'es' ? 'Modo Offline' : 'Offline Mode',
+      title: language === 'es' ? 'Modo offline' : 'Offline mode',
       description: language === 'es'
         ? 'Funcionalidad básica disponible sin conexión a internet.'
         : 'Basic functionality available without internet connection.'

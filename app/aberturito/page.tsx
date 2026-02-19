@@ -23,28 +23,28 @@ export default function AberturitoLanding() {
   const benefits = [
     {
       icon: Users,
-      title: language === 'es' ? 'Conexión Total' : 'Total Connection',
+      title: language === 'es' ? 'Conexión total' : 'Total connection',
       description: language === 'es' 
         ? 'Integra todos los departamentos en una plataforma unificada para colaboración perfecta.'
         : 'Integrates all departments in one unified platform for perfect collaboration.'
     },
     {
       icon: MessageSquare,
-      title: language === 'es' ? 'Comunicación Fluida' : 'Fluid Communication',
+      title: language === 'es' ? 'Comunicación fluida' : 'Fluid communication',
       description: language === 'es'
         ? 'Facilita la comunicación entre administración, fábrica, colocadores y ventas.'
         : 'Facilitates communication between administration, factory, installers, and sales.'
     },
     {
       icon: TrendingUp,
-      title: language === 'es' ? 'Eficiencia Operativa' : 'Operational Efficiency',
+      title: language === 'es' ? 'Eficiencia operativa' : 'Operational efficiency',
       description: language === 'es'
         ? 'Optimiza el seguimiento de órdenes y mejora la productividad general.'
         : 'Optimizes order tracking and improves overall productivity.'
     },
     {
       icon: Target,
-      title: language === 'es' ? 'Gestión Centralizada' : 'Centralized Management',
+      title: language === 'es' ? 'Gestión centralizada' : 'Centralized management',
       description: language === 'es'
         ? 'Control completo desde un solo lugar con acceso en tiempo real a toda la información.'
         : 'Complete control from one place with real-time access to all information.'
@@ -53,37 +53,37 @@ export default function AberturitoLanding() {
 
   const features = [
     {
-      title: language === 'es' ? 'Gestión de Proyectos' : 'Project Management',
+      title: language === 'es' ? 'Gestión de poyectos' : 'Project management',
       description: language === 'es'
         ? 'Seguimiento completo de cada proyecto desde el inicio hasta la finalización.'
         : 'Complete tracking of each project from start to finish.'
     },
     {
-      title: language === 'es' ? 'Integración de Equipos' : 'Team Integration',
+      title: language === 'es' ? 'Integración de equipos' : 'Team integration',
       description: language === 'es'
         ? 'Conecta a todos los miembros del equipo con roles y permisos definidos.'
         : 'Connects all team members with defined roles and permissions.'
     },
     {
-      title: language === 'es' ? 'Reportes en Tiempo Real' : 'Real-time Reports',
+      title: language === 'es' ? 'Reportes en tiempo real' : 'Real-time reports',
       description: language === 'es'
         ? 'Dashboard actualizado instantáneamente con métricas clave del negocio.'
         : 'Instantly updated dashboard with key business metrics.'
     },
     {
-      title: language === 'es' ? 'Sistema de Tareas' : 'Task System',
+      title: language === 'es' ? 'Sistema de tareas' : 'Task system',
       description: language === 'es'
         ? 'Asignación y seguimiento de tareas con notificaciones automáticas.'
         : 'Task assignment and tracking with automatic notifications.'
     },
     {
-      title: language === 'es' ? 'Compartición de Archivos' : 'File Sharing',
+      title: language === 'es' ? 'Compartición de archivos' : 'File sharing',
       description: language === 'es'
         ? 'Almacenamiento centralizado de documentos con acceso controlado.'
         : 'Centralized document storage with controlled access.'
     },
     {
-      title: language === 'es' ? 'Chat Interno' : 'Internal Chat',
+      title: language === 'es' ? 'Chat interno' : 'Internal chat',
       description: language === 'es'
         ? 'Comunicación directa entre miembros del equipo con historial completo.'
         : 'Direct communication between team members with complete history.'
