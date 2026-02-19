@@ -34,7 +34,7 @@ export default function HeroSection() {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-background via-muted/30 to-accent/10"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-background via-muted/30 to-accent/10 pt-20 md:pt-24"
     >
       {/* Animated Background */}
       <div className="absolute inset-0">
