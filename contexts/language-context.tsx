@@ -70,7 +70,7 @@ const translations = {
     'footer.getInTouch': 'Get in touch',
     'footer.madeWith': 'Made with',
     'footer.byTeam': 'by the DLAY team',
-    'footer.copyright': ' 2026 DLAY. All rights reserved.',
+    'footer.copyright': '© {year} DLAY. All rights reserved.',
     'navigation.home': 'Home',
     'navigation.about': 'About',
     'navigation.team': 'Team',
@@ -140,7 +140,7 @@ const translations = {
     'footer.getInTouch': 'Ponte en contacto',
     'footer.madeWith': 'Hecho con',
     'footer.byTeam': 'por el equipo DLAY',
-    'footer.copyright': '© 2026 DLAY. Todos los derechos reservados.',
+    'footer.copyright': '© {year} DLAY. Todos los derechos reservados.',
     'navigation.home': 'Inicio',
     'navigation.about': 'Acerca de',
     'navigation.team': 'Equipo',
@@ -174,7 +174,9 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
 
   const t = (key: string): string => {
     const direct = (translations[language] as Record<string, unknown>)[key]
-    if (typeof direct === 'string') return direct
+    if (typeof direct === 'string') {
+      return direct.replace('{year}', new Date().getFullYear().toString())
+    }
 
     const parts = key.split('.')
     let current: unknown = translations[language]
@@ -187,7 +189,8 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
       }
     }
 
-    return typeof current === 'string' ? current : key
+    const result = typeof current === 'string' ? current : key
+    return result.replace('{year}', new Date().getFullYear().toString())
   }
 
   return (
