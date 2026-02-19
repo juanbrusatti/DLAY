@@ -1,35 +1,42 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import { useLanguage } from "@/contexts/language-context";
 import styles from "./animated-story.module.css";
 
 const AnimatedStory = () => {
-  const storyText = `DLAY fue fundado por un grupo de estudiantes apasionados de ciencias de la computación que compartían una visión común: cerrar la brecha entre ideas innovadoras y soluciones de software prácticas.
+  const { t, language } = useLanguage();
+  
+  const storyText = `${t('about.storyText1')}
 
-Lo que comenzó como sesiones de programación nocturnas en nuestro laboratorio universitario ha evolucionado hacia un equipo dedicado comprometido con transformar cómo las empresas abordan la tecnología.
+${t('about.storyText2')}
 
-Creemos que el gran software no se trata solo de código limpio, se trata de entender las necesidades de nuestros clientes y entregar soluciones que marquen una diferencia real.`;
+${t('about.storyText3')}`;
 
   const [displayedText, setDisplayedText] = useState("");
 
   useEffect(() => {
+    setDisplayedText(""); // Reset cuando cambie el idioma o el texto
     let currentCharIndex = 0;
 
     const interval = setInterval(() => {
       if (currentCharIndex < storyText.length) {
-        setDisplayedText((prev) => prev + storyText[currentCharIndex]);
+        const char = storyText[currentCharIndex];
+        if (char !== undefined) {
+          setDisplayedText((prev) => prev + char);
+        }
         currentCharIndex++;
       } else {
         clearInterval(interval);
       }
-    }, 25); // Velocidad aumentada
+    }, 25);
 
     return () => clearInterval(interval);
-  }, [storyText]);
+  }, [storyText, language]);
 
   return (
     <div className={styles.editorContainer}>
-      <div className={styles.editorHeader}>Nuestra Historia</div>
+      <div className={styles.editorHeader}>{t('about.ourStory')}</div>
       <div className={styles.editorContent}>{displayedText}</div>
     </div>
   );

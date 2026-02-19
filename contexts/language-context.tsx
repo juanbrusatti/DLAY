@@ -95,7 +95,7 @@ const translations = {
     'about.ourStory': 'Nuestra historia',
     'about.storyText1': 'DLAY fue fundado por un grupo de estudiantes apasionados de ciencias de la computación que compartían una visión común: cerrar la brecha entre ideas innovadoras y soluciones de software prácticas.',
     'about.storyText2': 'Lo que comenzó como sesiones de programación nocturnas en nuestro laboratorio universitario ha evolucionado hacia un equipo dedicado comprometido con transformar cómo las empresas abordan la tecnología.',
-    'about.storyText3': 'Creemos que el gran software no se trata solo de código limpio—se trata de entender las necesidades de nuestros clientes y entregar soluciones que marquen una diferencia real.',
+    'about.storyText3': 'Creemos que el gran software no se trata solo de código limpio, se trata de entender las necesidades de nuestros clientes y entregar soluciones que marquen una diferencia real.',
     'about.whatDrivesUs': 'Lo que nos impulsa',
     'about.values.trust.title': 'Confianza y compromiso',
     'about.values.trust.description': 'Construimos relaciones duraderas con nuestros clientes a través de la transparencia, confiabilidad y dedicación inquebrantable a su éxito.',
