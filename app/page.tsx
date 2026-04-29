@@ -9,6 +9,7 @@ import CustomCursor from "@/components/custom-cursor"
 import StatsSection from "@/components/stats-section"
 import PageTransition from "@/components/page-transition"
 import VisitTracker from "@/components/visit-tracker"
+import SmoothScroll from "@/components/smooth-scroll"
 
 export default function Home() {
   return (
@@ -16,16 +17,18 @@ export default function Home() {
         <VisitTracker />
         <PageTransition />
         <CustomCursor />
-        <div className="relative z-10">
-          <Header />
-          <HeroSection />
-          <StatsSection />
-          <ProjectsSection />
-          <AboutSection />
-          <TeamSection />
-          <ContactSection />
-          <Footer />
-        </div>
+        <SmoothScroll>
+          <div className="relative z-10">
+            <Header />
+            <HeroSection />
+            <StatsSection />
+            <ProjectsSection />
+            <AboutSection />
+            <TeamSection />
+            <ContactSection />
+            <Footer />
+          </div>
+        </SmoothScroll>
       </main>
   )
 }

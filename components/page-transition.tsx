@@ -5,8 +5,21 @@ import { useEffect, useState } from 'react'
 export default function PageTransition() {
   const [isLoading, setIsLoading] = useState(true)
   const [isExiting, setIsExiting] = useState(false)
+  const [particles, setParticles] = useState<Array<{ left: string; top: string; delay: string; duration: string }>>([])
+  const [isMounted, setIsMounted] = useState(false)
 
   useEffect(() => {
+    setIsMounted(true)
+    
+    // Generate particles on client side only
+    const particleData = [...Array(20)].map(() => ({
+      left: `${Math.random() * 100}%`,
+      top: `${Math.random() * 100}%`,
+      delay: `${Math.random() * 2}s`,
+      duration: `${2 + Math.random() * 2}s`
+    }))
+    setParticles(particleData)
+    
     // Hide loader after content is loaded
     const timer = setTimeout(() => {
       setIsExiting(true)
@@ -26,16 +39,16 @@ export default function PageTransition() {
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-primary via-accent to-primary opacity-10 animate-pulse"></div>
         
-        {/* Floating particles */}
-        {[...Array(20)].map((_, i) => (
+        {/* Floating particles - only render after client mount */}
+        {isMounted && particles.map((particle, i) => (
           <div
             key={i}
             className="absolute w-2 h-2 bg-primary rounded-full animate-bounce"
             style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 2}s`,
-              animationDuration: `${2 + Math.random() * 2}s`
+              left: particle.left,
+              top: particle.top,
+              animationDelay: particle.delay,
+              animationDuration: particle.duration
             }}
           />
         ))}

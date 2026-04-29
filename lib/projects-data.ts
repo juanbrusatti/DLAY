@@ -65,6 +65,18 @@ export const projectsData = {
       landingUrl: "/applert",
       demoUrl: "#",
       githubUrl: "https://github.com/juanbrusatti/municipalidad-app"
+    },
+    {
+      id: "applert-web",
+      name: "Applert Web",
+      client: "Vlan",
+      description: "Sitio web informativo para Applert que explica qué es el servicio, cómo funciona, en qué sectores tiene soporte, cobertura actual y cómo implementarlo en municipios. La web sirve como punto de información para ciudadanos y autoridades interesadas en adoptar la tecnología de respuesta a emergencias.",
+      descriptionEn: "Informational website for Applert that explains what the service is, how it works, which sectors it supports, current coverage, and how to implement it in municipalities. The website serves as an information point for citizens and authorities interested in adopting emergency response technology.",
+      image: "/applert-web.png",
+      technologies: ["Next.js", "Tailwind CSS", "Vercel"],
+      landingUrl: "https://applert-web-site-s3zk.vercel.app/",
+      demoUrl: "https://applert-web-site-s3zk.vercel.app/",
+      githubUrl: "#"
     }
   ]
 }
